@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCF714001BF7C32E00E5732E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF713FF1BF7C32E00E5732E /* main.m */; };
+		DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714021BF7C32E00E5732E /* AppDelegate.m */; };
+		DCF714061BF7C32E00E5732E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714051BF7C32E00E5732E /* ViewController.m */; };
+		DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF714071BF7C32E00E5732E /* Main.storyboard */; };
+		DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */; };
+		DCF7140E1BF7C32E00E5732E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF7140D1BF7C32E00E5732E /* Assets.xcassets */; };
+		DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */; };
+		DCF7141C1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */; };
+		DCF714271BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCF714181BF7C32E00E5732E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF713F31BF7C32E00E5732E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF713FA1BF7C32E00E5732E;
+			remoteInfo = "FBLA Fashion 2015";
+		};
+		DCF714231BF7C32F00E5732E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF713F31BF7C32E00E5732E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF713FA1BF7C32E00E5732E;
+			remoteInfo = "FBLA Fashion 2015";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCF713FB1BF7C32E00E5732E /* FBLA Fashion 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FBLA Fashion 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF713FF1BF7C32E00E5732E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCF714011BF7C32E00E5732E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCF714021BF7C32E00E5732E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCF714041BF7C32E00E5732E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCF714051BF7C32E00E5732E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCF714081BF7C32E00E5732E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FBLA_Fashion_2015.xcdatamodel; sourceTree = "<group>"; };
+		DCF7140D1BF7C32E00E5732E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCF714101BF7C32E00E5732E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCF714121BF7C32E00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF714171BF7C32E00E5732E /* FBLA Fashion 2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FBLA Fashion 2015Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLA_Fashion_2015Tests.m; sourceTree = "<group>"; };
+		DCF7141D1BF7C32E00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF714221BF7C32F00E5732E /* FBLA Fashion 2015UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FBLA Fashion 2015UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLA_Fashion_2015UITests.m; sourceTree = "<group>"; };
+		DCF714281BF7C32F00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCF713F81BF7C32E00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714141BF7C32E00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF7141F1BF7C32F00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCF713F21BF7C32E00E5732E = {
+			isa = PBXGroup;
+			children = (
+				DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */,
+				DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */,
+				DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */,
+				DCF713FC1BF7C32E00E5732E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCF713FC1BF7C32E00E5732E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCF713FB1BF7C32E00E5732E /* FBLA Fashion 2015.app */,
+				DCF714171BF7C32E00E5732E /* FBLA Fashion 2015Tests.xctest */,
+				DCF714221BF7C32F00E5732E /* FBLA Fashion 2015UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */ = {
+			isa = PBXGroup;
+			children = (
+				DCF714011BF7C32E00E5732E /* AppDelegate.h */,
+				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
+				DCF714041BF7C32E00E5732E /* ViewController.h */,
+				DCF714051BF7C32E00E5732E /* ViewController.m */,
+				DCF714071BF7C32E00E5732E /* Main.storyboard */,
+				DCF7140D1BF7C32E00E5732E /* Assets.xcassets */,
+				DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */,
+				DCF714121BF7C32E00E5732E /* Info.plist */,
+				DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */,
+				DCF713FE1BF7C32E00E5732E /* Supporting Files */,
+			);
+			path = "FBLA Fashion 2015";
+			sourceTree = "<group>";
+		};
+		DCF713FE1BF7C32E00E5732E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCF713FF1BF7C32E00E5732E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */,
+				DCF7141D1BF7C32E00E5732E /* Info.plist */,
+			);
+			path = "FBLA Fashion 2015Tests";
+			sourceTree = "<group>";
+		};
+		DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */,
+				DCF714281BF7C32F00E5732E /* Info.plist */,
+			);
+			path = "FBLA Fashion 2015UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCF713FA1BF7C32E00E5732E /* FBLA Fashion 2015 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF7142B1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015" */;
+			buildPhases = (
+				DCF713F71BF7C32E00E5732E /* Sources */,
+				DCF713F81BF7C32E00E5732E /* Frameworks */,
+				DCF713F91BF7C32E00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FBLA Fashion 2015";
+			productName = "FBLA Fashion 2015";
+			productReference = DCF713FB1BF7C32E00E5732E /* FBLA Fashion 2015.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCF714161BF7C32E00E5732E /* FBLA Fashion 2015Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF7142E1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015Tests" */;
+			buildPhases = (
+				DCF714131BF7C32E00E5732E /* Sources */,
+				DCF714141BF7C32E00E5732E /* Frameworks */,
+				DCF714151BF7C32E00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF714191BF7C32E00E5732E /* PBXTargetDependency */,
+			);
+			name = "FBLA Fashion 2015Tests";
+			productName = "FBLA Fashion 2015Tests";
+			productReference = DCF714171BF7C32E00E5732E /* FBLA Fashion 2015Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DCF714211BF7C32F00E5732E /* FBLA Fashion 2015UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF714311BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015UITests" */;
+			buildPhases = (
+				DCF7141E1BF7C32F00E5732E /* Sources */,
+				DCF7141F1BF7C32F00E5732E /* Frameworks */,
+				DCF714201BF7C32F00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF714241BF7C32F00E5732E /* PBXTargetDependency */,
+			);
+			name = "FBLA Fashion 2015UITests";
+			productName = "FBLA Fashion 2015UITests";
+			productReference = DCF714221BF7C32F00E5732E /* FBLA Fashion 2015UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCF713F31BF7C32E00E5732E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "SPYN Enterprises";
+				TargetAttributes = {
+					DCF713FA1BF7C32E00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					DCF714161BF7C32E00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = DCF713FA1BF7C32E00E5732E;
+					};
+					DCF714211BF7C32F00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = DCF713FA1BF7C32E00E5732E;
+					};
+				};
+			};
+			buildConfigurationList = DCF713F61BF7C32E00E5732E /* Build configuration list for PBXProject "FBLA Fashion 2015" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCF713F21BF7C32E00E5732E;
+			productRefGroup = DCF713FC1BF7C32E00E5732E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCF713FA1BF7C32E00E5732E /* FBLA Fashion 2015 */,
+				DCF714161BF7C32E00E5732E /* FBLA Fashion 2015Tests */,
+				DCF714211BF7C32F00E5732E /* FBLA Fashion 2015UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCF713F91BF7C32E00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */,
+				DCF7140E1BF7C32E00E5732E /* Assets.xcassets in Resources */,
+				DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714151BF7C32E00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714201BF7C32F00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCF713F71BF7C32E00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF714061BF7C32E00E5732E /* ViewController.m in Sources */,
+				DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */,
+				DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */,
+				DCF714001BF7C32E00E5732E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714131BF7C32E00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF7141C1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF7141E1BF7C32F00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF714271BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCF714191BF7C32E00E5732E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF713FA1BF7C32E00E5732E /* FBLA Fashion 2015 */;
+			targetProxy = DCF714181BF7C32E00E5732E /* PBXContainerItemProxy */;
+		};
+		DCF714241BF7C32F00E5732E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF713FA1BF7C32E00E5732E /* FBLA Fashion 2015 */;
+			targetProxy = DCF714231BF7C32F00E5732E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCF714071BF7C32E00E5732E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF714081BF7C32E00E5732E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF714101BF7C32E00E5732E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCF714291BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCF7142A1BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCF7142C1BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCF7142D1BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCF7142F1BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "FBLA Fashion 2015Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBLA Fashion 2015.app/FBLA Fashion 2015";
+			};
+			name = Debug;
+		};
+		DCF714301BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "FBLA Fashion 2015Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBLA Fashion 2015.app/FBLA Fashion 2015";
+			};
+			name = Release;
+		};
+		DCF714321BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBLA Fashion 2015UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "FBLA Fashion 2015";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DCF714331BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBLA Fashion 2015UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "FBLA Fashion 2015";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCF713F61BF7C32E00E5732E /* Build configuration list for PBXProject "FBLA Fashion 2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF714291BF7C32F00E5732E /* Debug */,
+				DCF7142A1BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF7142B1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF7142C1BF7C32F00E5732E /* Debug */,
+				DCF7142D1BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCF7142E1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF7142F1BF7C32F00E5732E /* Debug */,
+				DCF714301BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCF714311BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF714321BF7C32F00E5732E /* Debug */,
+				DCF714331BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */,
+			);
+			currentVersion = DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */;
+			path = FBLA_Fashion_2015.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCF713F31BF7C32E00E5732E /* Project object */;
+}
