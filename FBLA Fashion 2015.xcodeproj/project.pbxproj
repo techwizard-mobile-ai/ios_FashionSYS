@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC855F8D1BF9380000864E0D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855F8B1BF9380000864E0D /* Bolts.framework */; };
+		DC855F8E1BF9380000864E0D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855F8C1BF9380000864E0D /* Parse.framework */; };
 		DCF714001BF7C32E00E5732E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF713FF1BF7C32E00E5732E /* main.m */; };
 		DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714021BF7C32E00E5732E /* AppDelegate.m */; };
 		DCF714061BF7C32E00E5732E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714051BF7C32E00E5732E /* ViewController.m */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC855F8B1BF9380000864E0D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DC855F8C1BF9380000864E0D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		DCF713FB1BF7C32E00E5732E /* FBLA Fashion 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FBLA Fashion 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF713FF1BF7C32E00E5732E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCF714011BF7C32E00E5732E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC855F8E1BF9380000864E0D /* Parse.framework in Frameworks */,
+				DC855F8D1BF9380000864E0D /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,8 @@
 		DCF713F21BF7C32E00E5732E = {
 			isa = PBXGroup;
 			children = (
+				DC855F8B1BF9380000864E0D /* Bolts.framework */,
+				DC855F8C1BF9380000864E0D /* Parse.framework */,
 				DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */,
 				DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */,
 				DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */,
@@ -415,6 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBLA",
+					Fashion,
+					2015,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015";
@@ -426,6 +441,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBLA",
+					Fashion,
+					2015,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015";
@@ -500,6 +522,7 @@
 				DCF7142D1BF7C32F00E5732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCF7142E1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +531,7 @@
 				DCF714301BF7C32F00E5732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCF714311BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "FBLA Fashion 2015UITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +540,7 @@
 				DCF714331BF7C32F00E5732E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
