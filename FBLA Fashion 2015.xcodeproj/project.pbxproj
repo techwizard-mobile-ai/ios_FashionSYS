@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC855FA41BF9391A00864E0D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855F9D1BF9391A00864E0D /* Bolts.framework */; };
-		DC855FA51BF9391A00864E0D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855F9E1BF9391A00864E0D /* Parse.framework */; };
-		DC855FA61BF9391A00864E0D /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855F9F1BF9391A00864E0D /* ParseCrashReporting.framework */; };
-		DC855FA71BF9391A00864E0D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855FA01BF9391A00864E0D /* ParseFacebookUtils.framework */; };
-		DC855FA81BF9391A00864E0D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855FA11BF9391A00864E0D /* ParseFacebookUtilsV4.framework */; };
-		DC855FA91BF9391A00864E0D /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855FA21BF9391A00864E0D /* ParseTwitterUtils.framework */; };
-		DC855FAA1BF9391A00864E0D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC855FA31BF9391A00864E0D /* ParseUI.framework */; };
+		DC905DD41BFA8EAF00BB9B0D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DC51BFA8E8500BB9B0D /* Bolts.framework */; };
+		DC905DD51BFA8EAF00BB9B0D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DC61BFA8E8500BB9B0D /* Parse.framework */; };
+		DC905DD61BFA8EAF00BB9B0D /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DC71BFA8E8500BB9B0D /* ParseCrashReporting.framework */; };
+		DC905DD71BFA8EAF00BB9B0D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DC81BFA8E8500BB9B0D /* ParseFacebookUtils.framework */; };
+		DC905DD81BFA8EAF00BB9B0D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DC91BFA8E8500BB9B0D /* ParseFacebookUtilsV4.framework */; };
+		DC905DD91BFA8EAF00BB9B0D /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DCA1BFA8E8500BB9B0D /* ParseTwitterUtils.framework */; };
+		DC905DDA1BFA8EAF00BB9B0D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DCB1BFA8E8500BB9B0D /* ParseUI.framework */; };
+		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
+		DC905DDE1BFA8EE400BB9B0D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */; };
+		DC905DE01BFA8EEA00BB9B0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */; };
+		DC905DE21BFA8EF400BB9B0D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */; };
+		DC905DE41BFA8EF800BB9B0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */; };
+		DC905DE61BFA8EFC00BB9B0D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE51BFA8EFC00BB9B0D /* Security.framework */; };
+		DC905DE81BFA8F0200BB9B0D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */; };
+		DC905DEA1BFA8F0A00BB9B0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */; };
+		DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */; };
+		DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */; };
 		DCF714001BF7C32E00E5732E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF713FF1BF7C32E00E5732E /* main.m */; };
 		DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714021BF7C32E00E5732E /* AppDelegate.m */; };
 		DCF714061BF7C32E00E5732E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714051BF7C32E00E5732E /* ViewController.m */; };
@@ -43,13 +53,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC855F9D1BF9391A00864E0D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/Bolts.framework"; sourceTree = "<group>"; };
-		DC855F9E1BF9391A00864E0D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/Parse.framework"; sourceTree = "<group>"; };
-		DC855F9F1BF9391A00864E0D /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
-		DC855FA01BF9391A00864E0D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
-		DC855FA11BF9391A00864E0D /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
-		DC855FA21BF9391A00864E0D /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
-		DC855FA31BF9391A00864E0D /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "FBLA Fashion 2015/parse-library-1.9.1/ParseUI.framework"; sourceTree = "<group>"; };
+		DC905DC51BFA8E8500BB9B0D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DC905DC61BFA8E8500BB9B0D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DC905DC71BFA8E8500BB9B0D /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		DC905DC81BFA8E8500BB9B0D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		DC905DC91BFA8E8500BB9B0D /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		DC905DCA1BFA8E8500BB9B0D /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		DC905DCB1BFA8E8500BB9B0D /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC905DE51BFA8EFC00BB9B0D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DCF713FB1BF7C32E00E5732E /* FBLA Fashion 2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FBLA Fashion 2015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF713FF1BF7C32E00E5732E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCF714011BF7C32E00E5732E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,13 +94,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC855FA51BF9391A00864E0D /* Parse.framework in Frameworks */,
-				DC855FA61BF9391A00864E0D /* ParseCrashReporting.framework in Frameworks */,
-				DC855FAA1BF9391A00864E0D /* ParseUI.framework in Frameworks */,
-				DC855FA71BF9391A00864E0D /* ParseFacebookUtils.framework in Frameworks */,
-				DC855FA41BF9391A00864E0D /* Bolts.framework in Frameworks */,
-				DC855FA91BF9391A00864E0D /* ParseTwitterUtils.framework in Frameworks */,
-				DC855FA81BF9391A00864E0D /* ParseFacebookUtilsV4.framework in Frameworks */,
+				DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */,
+				DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */,
+				DC905DEA1BFA8F0A00BB9B0D /* SystemConfiguration.framework in Frameworks */,
+				DC905DE81BFA8F0200BB9B0D /* StoreKit.framework in Frameworks */,
+				DC905DE61BFA8EFC00BB9B0D /* Security.framework in Frameworks */,
+				DC905DE41BFA8EF800BB9B0D /* QuartzCore.framework in Frameworks */,
+				DC905DE21BFA8EF400BB9B0D /* CoreLocation.framework in Frameworks */,
+				DC905DE01BFA8EEA00BB9B0D /* CoreGraphics.framework in Frameworks */,
+				DC905DDE1BFA8EE400BB9B0D /* CFNetwork.framework in Frameworks */,
+				DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */,
+				DC905DD41BFA8EAF00BB9B0D /* Bolts.framework in Frameworks */,
+				DC905DD51BFA8EAF00BB9B0D /* Parse.framework in Frameworks */,
+				DC905DD61BFA8EAF00BB9B0D /* ParseCrashReporting.framework in Frameworks */,
+				DC905DD71BFA8EAF00BB9B0D /* ParseFacebookUtils.framework in Frameworks */,
+				DC905DD81BFA8EAF00BB9B0D /* ParseFacebookUtilsV4.framework in Frameworks */,
+				DC905DD91BFA8EAF00BB9B0D /* ParseTwitterUtils.framework in Frameworks */,
+				DC905DDA1BFA8EAF00BB9B0D /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,17 +131,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC905DD31BFA8E8900BB9B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */,
+				DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */,
+				DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */,
+				DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */,
+				DC905DE51BFA8EFC00BB9B0D /* Security.framework */,
+				DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */,
+				DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */,
+				DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */,
+				DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */,
+				DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */,
+				DC905DC51BFA8E8500BB9B0D /* Bolts.framework */,
+				DC905DC61BFA8E8500BB9B0D /* Parse.framework */,
+				DC905DC71BFA8E8500BB9B0D /* ParseCrashReporting.framework */,
+				DC905DC81BFA8E8500BB9B0D /* ParseFacebookUtils.framework */,
+				DC905DC91BFA8E8500BB9B0D /* ParseFacebookUtilsV4.framework */,
+				DC905DCA1BFA8E8500BB9B0D /* ParseTwitterUtils.framework */,
+				DC905DCB1BFA8E8500BB9B0D /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			path = "FBLA Fashion 2015";
+			sourceTree = "<group>";
+		};
 		DCF713F21BF7C32E00E5732E = {
 			isa = PBXGroup;
 			children = (
-				DC855F9D1BF9391A00864E0D /* Bolts.framework */,
-				DC855F9E1BF9391A00864E0D /* Parse.framework */,
-				DC855F9F1BF9391A00864E0D /* ParseCrashReporting.framework */,
-				DC855FA01BF9391A00864E0D /* ParseFacebookUtils.framework */,
-				DC855FA11BF9391A00864E0D /* ParseFacebookUtilsV4.framework */,
-				DC855FA21BF9391A00864E0D /* ParseTwitterUtils.framework */,
-				DC855FA31BF9391A00864E0D /* ParseUI.framework */,
 				DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */,
+				DC905DD31BFA8E8900BB9B0D /* Frameworks */,
 				DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */,
 				DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */,
 				DCF713FC1BF7C32E00E5732E /* Products */,
@@ -445,13 +494,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBLA",
+					/Users/Stephen/Documents/Projects/FBLA,
 					Fashion,
-					2015,
+					2015/FBLA,
+					Fashion,
+					2015/,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/FBLA",
 					Fashion,
-					"2015/parse-library-1.9.1",
+					2015,
 				);
 				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -466,13 +517,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FBLA",
+					/Users/Stephen/Documents/Projects/FBLA,
 					Fashion,
-					2015,
+					2015/FBLA,
+					Fashion,
+					2015/,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/FBLA",
 					Fashion,
-					"2015/parse-library-1.9.1",
+					2015,
 				);
 				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
