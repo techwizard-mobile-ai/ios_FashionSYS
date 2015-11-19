@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
-@interface LoginViewController : UIViewController
+#import "RCLoginView.h"
+
+@class RCLoginViewController;
+
+@interface RCLoginViewController : UIViewController
 
 @end

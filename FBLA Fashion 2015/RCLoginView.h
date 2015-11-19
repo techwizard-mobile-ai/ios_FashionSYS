@@ -1,0 +1,21 @@
+//
+//  LoginView.h
+//  FBLA Fashion 2015
+//
+//  Created by Stephen Polcyn on 11/19/15.
+//  Copyright © 2015 SPYN Enterprises. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class RCLoginViewController;
+
+@interface RCLoginView : UIView
+
+@property UIButton* signInButton;
+@property UIButton* registerButton;
+@property UILabel* redCarpetLabel;
+
+@property (nonatomic, weak) RCLoginViewController* delegate;
+
+@end

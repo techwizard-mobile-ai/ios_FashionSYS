@@ -6,22 +6,39 @@
 //  Copyright © 2015 SPYN Enterprises. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "RCLoginViewController.h"
 
-@interface LoginViewController ()
+@interface RCLoginViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation RCLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //configure login view
+    RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
+    loginView.delegate = self;
+    
+    self.view = loginView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (![PFUser currentUser]) {
+        
+        
+        
+    }
 }
 
 /*
