@@ -54,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheanoModern-Regular.ttf"; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		DCF713FE1BF7C32E00E5732E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */,
 				DCF713FF1BF7C32E00E5732E /* main.m */,
 			);
 			name = "Supporting Files";
