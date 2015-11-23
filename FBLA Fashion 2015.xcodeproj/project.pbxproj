@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
+		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
 		DC905DDE1BFA8EE400BB9B0D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */; };
 		DC905DE01BFA8EEA00BB9B0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */; };
@@ -56,6 +57,8 @@
 /* Begin PBXFileReference section */
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
+		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DC3DF02C1C0048D10012B1EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 		DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */ = {
 			isa = PBXGroup;
 			children = (
+				DC2622711BFE7FD200F17574 /* Constants.h */,
+				DC3DF02C1C0048D10012B1EF /* Constants.m */,
 				DCF714011BF7C32E00E5732E /* AppDelegate.h */,
 				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
 				DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */,
@@ -360,6 +365,7 @@
 				DCF714001BF7C32E00E5732E /* main.m in Sources */,
 				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
 				DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */,
+				DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

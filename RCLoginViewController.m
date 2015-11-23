@@ -14,15 +14,27 @@
 
 @implementation RCLoginViewController
 
+
+- (id)initWithCoder:(NSCoder *)aDecoder //perform controller setup
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        //configure login view
+        RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
+        loginView.delegate = self;
+        
+        self.view = loginView;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //configure login view
-    RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
-    loginView.delegate = self;
-    
-    self.view = loginView;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -23,6 +23,17 @@
 {
     self = [super initWithFrame:rect];
     
+    //view background color
+    [self setBackgroundColor:[UIColor RCBackgroundColor]];
+    
+    _signInButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [_signInButton setTitle:@"sign in" forState:UIControlStateNormal];
+    [_signInButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_signInButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    _signInButton.titleLabel.font = [UIFont fontWithName:APP_FONT size:24];
+    [_signInButton sizeToFit];
+    
+    [self addSubview:_signInButton];
     
     
     return self;
