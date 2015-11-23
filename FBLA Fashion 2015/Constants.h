@@ -11,7 +11,13 @@
 
 #import <UIKit/UIKit.h>
 
+// UI Constants and Macros
 extern NSString* const APP_FONT;
+extern NSString* const APP_TITLE;
+
+#define AVAILABLE_HEIGHT ([[UIScreen mainScreen] bounds].size.height - [UIApplication sharedApplication].statusBarFrame.size.height)
+#define AVAILABLE_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+
 
 @interface UIColor (RCScheme)
 

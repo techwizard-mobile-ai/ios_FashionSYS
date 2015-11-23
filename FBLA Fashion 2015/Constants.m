@@ -11,11 +11,12 @@
 
 #import "Constants.h"
 
-NSString *const APP_FONT = @"Menlo-Regular";
+NSString *const APP_FONT = @"TheanoModern-Regular";
+NSString *const APP_TITLE = @"RED CARPET";
 
 @implementation UIColor (RCScheme)
 
-+(UIColor *) RCBackgroundColor { return [UIColor colorWithRed:(207/255.0) green:0.0 blue:(15/255.0) alpha:1.0]; }
++(UIColor *) RCBackgroundColor { return [UIColor colorWithRed:(155/255.0) green:(13/255.0) blue:(40/255.0) alpha:1.0]; }
 
 @end
 

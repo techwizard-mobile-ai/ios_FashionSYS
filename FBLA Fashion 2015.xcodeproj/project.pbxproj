@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -331,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */,
 				DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */,
 				DCF7140E1BF7C32E00E5732E /* Assets.xcassets in Resources */,
 				DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */,
