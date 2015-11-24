@@ -11,6 +11,7 @@
 
 @interface RCSignInView : UIView
 
+@property UILabel* title;
 @property UITextField* userName;
 @property UITextField* password;
 

@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
+#import "RCSignInView.h"
 
-@interface RCSignInViewController : UIViewController
+@interface RCSignInViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic) RCSignInView* signInView;
 
 @end

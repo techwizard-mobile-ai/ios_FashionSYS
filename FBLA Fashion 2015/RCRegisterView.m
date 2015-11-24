@@ -10,4 +10,16 @@
 
 @implementation RCRegisterView
 
+- (id) initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    _userName = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    
+    
+    self.backgroundColor = [UIColor RCBackgroundColor];
+    
+    return self;
+}
+
 @end

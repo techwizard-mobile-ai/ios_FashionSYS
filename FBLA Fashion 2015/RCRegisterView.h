@@ -11,4 +11,9 @@
 
 @interface RCRegisterView : UIView
 
+
+@property UITextField* userName;
+@property UITextField* password;
+@property UITextField* confirmPassword;
+
 @end
