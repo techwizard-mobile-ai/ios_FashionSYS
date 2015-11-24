@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */; };
+		D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */; };
+		D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */; };
+		D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0ED1C04F421002FD52C /* RCSignInView.m */; };
+		D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0F01C04F428002FD52C /* RCRegisterView.m */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -56,6 +60,14 @@
 
 /* Begin PBXFileReference section */
 		D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheanoModern-Regular.ttf"; sourceTree = "<group>"; };
+		D05DD0E61C04F3DF002FD52C /* RCSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSignInViewController.h; sourceTree = "<group>"; };
+		D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSignInViewController.m; sourceTree = "<group>"; };
+		D05DD0E91C04F3EB002FD52C /* RCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRegisterViewController.h; sourceTree = "<group>"; };
+		D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRegisterViewController.m; sourceTree = "<group>"; };
+		D05DD0EC1C04F421002FD52C /* RCSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSignInView.h; sourceTree = "<group>"; };
+		D05DD0ED1C04F421002FD52C /* RCSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSignInView.m; sourceTree = "<group>"; };
+		D05DD0EF1C04F428002FD52C /* RCRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRegisterView.h; sourceTree = "<group>"; };
+		D05DD0F01C04F428002FD52C /* RCRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRegisterView.m; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -136,6 +148,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D05DD0F21C05039A002FD52C /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				D05DD0E61C04F3DF002FD52C /* RCSignInViewController.h */,
+				D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */,
+				D05DD0EC1C04F421002FD52C /* RCSignInView.h */,
+				D05DD0ED1C04F421002FD52C /* RCSignInView.m */,
+			);
+			name = "Sign In";
+			sourceTree = "<group>";
+		};
+		D05DD0F31C0503A0002FD52C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */,
+				DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */,
+				DC26226E1BFE13BC00F17574 /* RCLoginView.h */,
+				DC26226F1BFE13BC00F17574 /* RCLoginView.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		D05DD0F41C0503A7002FD52C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D05DD0E91C04F3EB002FD52C /* RCRegisterViewController.h */,
+				D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */,
+				D05DD0EF1C04F428002FD52C /* RCRegisterView.h */,
+				D05DD0F01C04F428002FD52C /* RCRegisterView.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
 		DC905DD31BFA8E8900BB9B0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,10 +233,9 @@
 				DC3DF02C1C0048D10012B1EF /* Constants.m */,
 				DCF714011BF7C32E00E5732E /* AppDelegate.h */,
 				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
-				DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */,
-				DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */,
-				DC26226E1BFE13BC00F17574 /* RCLoginView.h */,
-				DC26226F1BFE13BC00F17574 /* RCLoginView.m */,
+				D05DD0F31C0503A0002FD52C /* Login */,
+				D05DD0F21C05039A002FD52C /* Sign In */,
+				D05DD0F41C0503A7002FD52C /* Register */,
 				DCF714071BF7C32E00E5732E /* Main.storyboard */,
 				DCF7140D1BF7C32E00E5732E /* Assets.xcassets */,
 				DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */,
@@ -364,7 +408,11 @@
 				DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */,
 				DCF714001BF7C32E00E5732E /* main.m in Sources */,
 				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
+				D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */,
 				DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */,
+				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
+				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,
+				D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */,
 				DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

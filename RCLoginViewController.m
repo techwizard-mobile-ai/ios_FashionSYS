@@ -7,6 +7,8 @@
 //
 
 #import "RCLoginViewController.h"
+#import "RCSignInViewController.h"
+#import "RCRegisterViewController.h"
 
 @interface RCLoginViewController ()
 
@@ -14,6 +16,23 @@
 
 @implementation RCLoginViewController
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        //configure login view
+        RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
+        [loginView.signInButton addTarget:self action:@selector(signIn:) forControlEvents:UIControlEventTouchUpInside];
+        [loginView.registerButton addTarget:self action:@selector(newRegister:) forControlEvents:UIControlEventTouchUpInside];
+        loginView.delegate = self;
+                
+        self.view = loginView;
+    }
+    
+    return self;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder //perform controller setup
 {
@@ -23,6 +42,8 @@
     {
         //configure login view
         RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
+        [loginView.signInButton addTarget:self action:@selector(signIn:) forControlEvents:UIControlEventTouchUpInside];
+        [loginView.registerButton addTarget:self action:@selector(newRegister:) forControlEvents:UIControlEventTouchUpInside];
         loginView.delegate = self;
         
         self.view = loginView;
@@ -42,15 +63,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+- (void)signIn:(id)sender
+{
+    NSLog(@"Signing in");
     
-    if (![PFUser currentUser]) {
-        
-        
-        
-    }
+    RCSignInViewController* signInController = [[RCSignInViewController alloc] init];
+    [self.navigationController pushViewController:signInController animated:YES];
+}
+
+
+- (void)newRegister:(id)sender
+{
+    RCRegisterViewController* registerController = [[RCRegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerController animated:YES];
 }
 
 /*

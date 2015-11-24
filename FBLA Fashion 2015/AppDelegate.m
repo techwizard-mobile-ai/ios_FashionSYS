@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RCLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,19 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-   
+    
+    RCLoginViewController* loginController = [[RCLoginViewController alloc] init];
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+    
+    navController.navigationBarHidden = YES;
+    navController.navigationBar.barTintColor = [UIColor RCNavigationBarBackgroundColor];
+    navController.navigationBar.tintColor = [UIColor whiteColor];
+    [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    loginController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navController;
     
     return YES;
 }

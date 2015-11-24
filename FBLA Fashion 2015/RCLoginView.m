@@ -41,16 +41,17 @@
     CGFloat buttonHeight = VERTICAL_PERCENTAGE * AVAILABLE_HEIGHT;
     CGFloat redCarpetLabelWidth = AVAILABLE_WIDTH - TITLE_PADDING * 2;
     CGFloat redCarpetLabelHeight = [APP_TITLE sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:APP_FONT size:TITLE_FONT_SIZE]}].height;
-    
-    
-    
+    CGFloat LINE_WIDTH = AVAILABLE_WIDTH / 180.0;
+    CGFloat LINE_HEIGHT = [APP_TITLE sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:APP_FONT size:BUTTON_FONT_SIZE]}].height;
+
     //Positioning
     CGFloat redCarpetLabelX = TITLE_PADDING;
     CGFloat redCarpetLabelY = AVAILABLE_HEIGHT / 2 - redCarpetLabelHeight;
     CGFloat signInButtonX = BUTTON_PADDING;
     CGFloat registerButtonX = AVAILABLE_WIDTH - BUTTON_PADDING - buttonWidth;
     CGFloat buttonY = redCarpetLabelY + redCarpetLabelHeight + BUTTON_PADDING * 2;
-    
+    CGFloat pathX = AVAILABLE_WIDTH / 2.0 - LINE_WIDTH / 2.0;
+    CGFloat pathY = buttonY;
     
     _redCarpetLabel = [[UILabel alloc] initWithFrame:CGRectMake(redCarpetLabelX, redCarpetLabelY, redCarpetLabelWidth, redCarpetLabelHeight)];
     _redCarpetLabel.text = @"RED CARPET";
@@ -77,6 +78,19 @@
     [self addSubview:_redCarpetLabel];
     [self addSubview:_signInButton];
     [self addSubview:_registerButton];
+    
+    //Center white line
+    UIBezierPath* path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(pathX, pathY)];
+    [path addLineToPoint:CGPointMake(pathX, pathY + LINE_HEIGHT)];
+    
+    CAShapeLayer* shape = [CAShapeLayer layer];
+    shape.path = [path CGPath];
+    shape.strokeColor = [[UIColor whiteColor] CGColor];
+    shape.fillColor = [[UIColor whiteColor] CGColor];
+    shape.lineWidth = LINE_WIDTH;
+    
+    [self.layer addSublayer:shape];
     
     
     return self;

@@ -14,9 +14,11 @@
 NSString *const APP_FONT = @"TheanoModern-Regular";
 NSString *const APP_TITLE = @"RED CARPET";
 
+
 @implementation UIColor (RCScheme)
 
 +(UIColor *) RCBackgroundColor { return [UIColor colorWithRed:(155/255.0) green:(13/255.0) blue:(40/255.0) alpha:1.0]; }
++(UIColor*) RCNavigationBarBackgroundColor { return [UIColor colorWithRed:(169/255.0) green:(169/255.0) blue:(169/255.0) alpha:1.0]; }
 
 @end
 

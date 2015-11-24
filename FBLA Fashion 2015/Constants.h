@@ -17,11 +17,13 @@ extern NSString* const APP_TITLE;
 
 #define AVAILABLE_HEIGHT ([[UIScreen mainScreen] bounds].size.height - [UIApplication sharedApplication].statusBarFrame.size.height)
 #define AVAILABLE_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define DEFAULT_Y [UIApplication sharedApplication].statusBarFrame.size.height
 
 
 @interface UIColor (RCScheme)
 
 +(UIColor*) RCBackgroundColor;
++(UIColor*) RCNavigationBarBackgroundColor;
 
 @end
 
