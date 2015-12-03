@@ -74,10 +74,9 @@
 }
 
 - (void)signIn:(id)sender
-{
-    NSLog(@"Signing in");
-    
+{    
     RCSignInViewController* signInController = [[RCSignInViewController alloc] init];
+    signInController.delegate = self;
     [self.navigationController pushViewController:signInController animated:YES];
 }
 
@@ -85,7 +84,26 @@
 - (void)newRegister:(id)sender
 {
     RCRegisterViewController* registerController = [[RCRegisterViewController alloc] init];
+    registerController.delegate = self;
     [self.navigationController pushViewController:registerController animated:YES];
+}
+
+- (void)switchToTabBar
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;  //get the app delegate
+    
+    RCMainTabController* tabController = [[RCMainTabController alloc] init];  //create the tab controller
+    appDelegate.window.rootViewController = tabController;  //switch the root view controller
+    [appDelegate.window makeKeyAndVisible];  //update
+    
+    tabController.view.alpha = 0.0;
+    
+    //animated appearance
+    [UIView animateWithDuration:1.5 animations:^{
+        tabController.view.alpha = 1.0;
+    }];
 }
 
 /*

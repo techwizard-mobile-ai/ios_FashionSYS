@@ -24,22 +24,25 @@
     //Parse API Token setup
     [Parse setApplicationId:@"N16sHUaiytmctIIuW1KwTaJIIlszx7mKZPea1q2t" clientKey:@"QvJCoL4QDgNd9InvZ6xG1Gm57WGdtp6nnc50R3Yr"];
     
-    // [Optional] Track statistics around application opens.
+    //Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    RCLoginViewController* loginController = [[RCLoginViewController alloc] init];
-    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+    RCLoginViewController* loginController = [[RCLoginViewController alloc] init];  //main login controller with sign in or register fields
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:loginController];  //navigation controller to manage the views
     
+    //configure the navigation controller's appeareance
     navController.navigationBarHidden = YES;
     navController.navigationBar.barTintColor = [UIColor RCNavigationBarBackgroundColor];
     navController.navigationBar.tintColor = [UIColor whiteColor];
     [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
+    //configure the login controller's appearance
     loginController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
+    //set the navigation controller as the root
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navController;
-    
+        
     return YES;
 }
 

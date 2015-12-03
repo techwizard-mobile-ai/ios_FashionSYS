@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import "AppDelegate.h"
+#import "RCMainTabController.h"
 
 #import "RCLoginView.h"
 
+
 @class RCLoginViewController;
 
-@interface RCLoginViewController : UIViewController
+@interface RCLoginViewController : UIViewController <EndLoginProcessProtocol>
 
 @end

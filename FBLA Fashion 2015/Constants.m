@@ -13,7 +13,7 @@
 
 NSString *const APP_FONT = @"TheanoModern-Regular";
 NSString *const APP_TITLE = @"RED CARPET";
-
+NSString *const DRESS_CODE_URL = @"http://pafbla.org/downloads/12-13_Web_Postings/+12_SLW_Documents/Pennsylvania_FBLA_Dress_Code_rev_May_19_2012.pdf";
 
 @implementation UIColor (RCScheme)
 

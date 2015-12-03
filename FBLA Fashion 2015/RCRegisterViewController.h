@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 #import "RCRegisterView.h"
+#import "RCLoginViewController.h"
 
 @interface RCRegisterViewController : UIViewController <UITextFieldDelegate>
 
@@ -16,7 +17,8 @@
 
 @property UIAlertController* passwordTooShort;
 @property UIAlertController* passwordsDontMatch;
-@property UIAlertController* registrationSuccessful;
 @property UIAlertController* registrationFailed;
+
+@property (nonatomic, weak) id <EndLoginProcessProtocol> delegate;
 
 @end

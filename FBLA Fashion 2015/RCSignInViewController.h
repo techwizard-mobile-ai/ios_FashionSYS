@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 #import "RCSignInView.h"
+#import "RCLoginViewController.h"
 
 @interface RCSignInViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) RCSignInView* signInView;
 
-@property UIAlertController* loginSuccessful;
 @property UIAlertController* loginFailed;
+
+@property (nonatomic, weak) id <EndLoginProcessProtocol> delegate;
 
 @end

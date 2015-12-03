@@ -23,9 +23,6 @@
     //configure alerts
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
     
-    _loginSuccessful = [UIAlertController alertControllerWithTitle:@"Success" message:@"Login Successful" preferredStyle:UIAlertControllerStyleAlert];
-    [_loginSuccessful addAction:ok];
-    
     _loginFailed = [UIAlertController alertControllerWithTitle:@"Failed" message:@"Login Failed" preferredStyle:UIAlertControllerStyleAlert];
     [_loginFailed addAction:ok];
     
@@ -70,7 +67,8 @@
     [PFUser logInWithUsernameInBackground:_signInView.userName.text password:_signInView.password.text block:^(PFUser * _Nullable user, NSError * _Nullable error) {
         if(user)  //tell the user they successfully logged in
         {
-            [self presentViewController:_loginSuccessful animated:YES completion:nil];
+            [self dismissViewControllerAnimated:NO completion:nil];
+            [self.delegate switchToTabBar];
         }
         else  //tell the user the login failed and why
         {
@@ -78,7 +76,7 @@
             [self presentViewController:_loginFailed animated:YES completion:nil];
         }
     }];
-     
+    
 }
 
 @end

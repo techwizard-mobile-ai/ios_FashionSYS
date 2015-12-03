@@ -46,6 +46,8 @@
     _userName.layer.borderWidth = BORDER_WIDTH;
     _userName.keyboardType = UIKeyboardTypeEmailAddress;
     _userName.returnKeyType = UIReturnKeyNext;
+    _userName.autocorrectionType = UITextAutocorrectionTypeNo;
+    _userName.autocapitalizationType = UITextAutocapitalizationTypeNone;
     
     //password field - same with a few adjustments
     _password = [self copytextField:_userName];

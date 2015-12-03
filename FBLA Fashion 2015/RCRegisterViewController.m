@@ -29,9 +29,6 @@
     _passwordsDontMatch = [UIAlertController alertControllerWithTitle:@"Password Mismatch" message:@"Your entered passwords do not match!" preferredStyle:UIAlertControllerStyleAlert];
     [_passwordsDontMatch addAction:ok];
     
-    _registrationSuccessful = [UIAlertController alertControllerWithTitle:@"Success" message:@"You are now registered for Red Carpet" preferredStyle:UIAlertControllerStyleAlert];
-    [_registrationSuccessful addAction:ok];
-    
     _registrationFailed = [UIAlertController alertControllerWithTitle:@"Failed" message:@"Registration failed. Try again later" preferredStyle:UIAlertControllerStyleAlert];
     [_registrationFailed addAction:ok];
     
@@ -105,7 +102,8 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(!error)
         {
-            [self presentViewController:_registrationSuccessful animated:YES completion:nil];  //tell user they succesfully registered
+            [self dismissViewControllerAnimated:NO completion:nil];
+            [self.delegate switchToTabBar];
         }
         else  //inform user of what went wrong with their registration
         {
