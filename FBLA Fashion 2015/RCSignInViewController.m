@@ -66,12 +66,13 @@
 
 -(void)signIn
 {
+    //sign the user in with Parse
     [PFUser logInWithUsernameInBackground:_signInView.userName.text password:_signInView.password.text block:^(PFUser * _Nullable user, NSError * _Nullable error) {
-        if(user)
+        if(user)  //tell the user they successfully logged in
         {
             [self presentViewController:_loginSuccessful animated:YES completion:nil];
         }
-        else
+        else  //tell the user the login failed and why
         {
             _loginFailed.message = [error userInfo][@"error"];
             [self presentViewController:_loginFailed animated:YES completion:nil];
