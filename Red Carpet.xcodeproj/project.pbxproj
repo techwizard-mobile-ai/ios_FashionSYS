@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D05D549F1C05250800175FA0 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05D549E1C05250800175FA0 /* Images-2.xcassets */; };
+		D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */; };
+		D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */; };
+		D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */; };
+		D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0ED1C04F421002FD52C /* RCSignInView.m */; };
+		D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0F01C04F428002FD52C /* RCRegisterView.m */; };
+		D05DD0F81C05240D002FD52C /* ios in Resources */ = {isa = PBXBuildFile; fileRef = D05DD0F71C05240D002FD52C /* ios */; };
+		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
+		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
+		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
+		DC905DDE1BFA8EE400BB9B0D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */; };
+		DC905DE01BFA8EEA00BB9B0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */; };
+		DC905DE21BFA8EF400BB9B0D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */; };
+		DC905DE41BFA8EF800BB9B0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */; };
+		DC905DE61BFA8EFC00BB9B0D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE51BFA8EFC00BB9B0D /* Security.framework */; };
+		DC905DE81BFA8F0200BB9B0D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */; };
+		DC905DEA1BFA8F0A00BB9B0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */; };
+		DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */; };
+		DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */; };
+		DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */; };
+		DCE62ADE1BFCB5C800520556 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62AD71BFCB5C800520556 /* Bolts.framework */; };
+		DCE62ADF1BFCB5C800520556 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62AD81BFCB5C800520556 /* Parse.framework */; };
+		DCE62AE11BFCB5C800520556 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62ADA1BFCB5C800520556 /* ParseFacebookUtils.framework */; };
+		DCE62AE21BFCB5C800520556 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62ADB1BFCB5C800520556 /* ParseFacebookUtilsV4.framework */; };
+		DCE62AE31BFCB5C800520556 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62ADC1BFCB5C800520556 /* ParseTwitterUtils.framework */; };
+		DCE62AE41BFCB5C800520556 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62ADD1BFCB5C800520556 /* ParseUI.framework */; };
+		DCF714001BF7C32E00E5732E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF713FF1BF7C32E00E5732E /* main.m */; };
+		DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714021BF7C32E00E5732E /* AppDelegate.m */; };
+		DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF714071BF7C32E00E5732E /* Main.storyboard */; };
+		DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */; };
+		DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */; };
+		DCF7141C1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */; };
+		DCF714271BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCF714181BF7C32E00E5732E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF713F31BF7C32E00E5732E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF713FA1BF7C32E00E5732E;
+			remoteInfo = "FBLA Fashion 2015";
+		};
+		DCF714231BF7C32F00E5732E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCF713F31BF7C32E00E5732E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCF713FA1BF7C32E00E5732E;
+			remoteInfo = "FBLA Fashion 2015";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D05D549E1C05250800175FA0 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Red Carpet/Images-2.xcassets"; sourceTree = "<group>"; };
+		D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheanoModern-Regular.ttf"; sourceTree = "<group>"; };
+		D05DD0E61C04F3DF002FD52C /* RCSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSignInViewController.h; sourceTree = "<group>"; };
+		D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSignInViewController.m; sourceTree = "<group>"; };
+		D05DD0E91C04F3EB002FD52C /* RCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRegisterViewController.h; sourceTree = "<group>"; };
+		D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRegisterViewController.m; sourceTree = "<group>"; };
+		D05DD0EC1C04F421002FD52C /* RCSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSignInView.h; sourceTree = "<group>"; };
+		D05DD0ED1C04F421002FD52C /* RCSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSignInView.m; sourceTree = "<group>"; };
+		D05DD0EF1C04F428002FD52C /* RCRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRegisterView.h; sourceTree = "<group>"; };
+		D05DD0F01C04F428002FD52C /* RCRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRegisterView.m; sourceTree = "<group>"; };
+		D05DD0F71C05240D002FD52C /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
+		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
+		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
+		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DC3DF02C1C0048D10012B1EF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC905DE51BFA8EFC00BB9B0D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCLoginViewController.h; path = ../RCLoginViewController.h; sourceTree = "<group>"; };
+		DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCLoginViewController.m; path = ../RCLoginViewController.m; sourceTree = "<group>"; };
+		DCE62AD71BFCB5C800520556 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
+		DCE62AD81BFCB5C800520556 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		DCE62ADA1BFCB5C800520556 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		DCE62ADB1BFCB5C800520556 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = ../ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		DCE62ADC1BFCB5C800520556 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = ../ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		DCE62ADD1BFCB5C800520556 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
+		DCF713FB1BF7C32E00E5732E /* Red Carpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Carpet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF713FF1BF7C32E00E5732E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCF714011BF7C32E00E5732E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCF714021BF7C32E00E5732E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCF714081BF7C32E00E5732E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FBLA_Fashion_2015.xcdatamodel; sourceTree = "<group>"; };
+		DCF714101BF7C32E00E5732E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCF714121BF7C32E00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF714171BF7C32E00E5732E /* Red Carpet.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red Carpet.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLA_Fashion_2015Tests.m; sourceTree = "<group>"; };
+		DCF7141D1BF7C32E00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF714221BF7C32F00E5732E /* Red Carpet.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red Carpet.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLA_Fashion_2015UITests.m; sourceTree = "<group>"; };
+		DCF714281BF7C32F00E5732E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCF713F81BF7C32E00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCE62AE11BFCB5C800520556 /* ParseFacebookUtils.framework in Frameworks */,
+				DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */,
+				DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */,
+				DC905DEA1BFA8F0A00BB9B0D /* SystemConfiguration.framework in Frameworks */,
+				DC905DE81BFA8F0200BB9B0D /* StoreKit.framework in Frameworks */,
+				DC905DE61BFA8EFC00BB9B0D /* Security.framework in Frameworks */,
+				DCE62AE31BFCB5C800520556 /* ParseTwitterUtils.framework in Frameworks */,
+				DC905DE41BFA8EF800BB9B0D /* QuartzCore.framework in Frameworks */,
+				DC905DE21BFA8EF400BB9B0D /* CoreLocation.framework in Frameworks */,
+				DCE62AE41BFCB5C800520556 /* ParseUI.framework in Frameworks */,
+				DC905DE01BFA8EEA00BB9B0D /* CoreGraphics.framework in Frameworks */,
+				DCE62ADE1BFCB5C800520556 /* Bolts.framework in Frameworks */,
+				DC905DDE1BFA8EE400BB9B0D /* CFNetwork.framework in Frameworks */,
+				DCE62ADF1BFCB5C800520556 /* Parse.framework in Frameworks */,
+				DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */,
+				DCE62AE21BFCB5C800520556 /* ParseFacebookUtilsV4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714141BF7C32E00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF7141F1BF7C32F00E5732E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D05DD0F21C05039A002FD52C /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				D05DD0E61C04F3DF002FD52C /* RCSignInViewController.h */,
+				D05DD0E71C04F3DF002FD52C /* RCSignInViewController.m */,
+				D05DD0EC1C04F421002FD52C /* RCSignInView.h */,
+				D05DD0ED1C04F421002FD52C /* RCSignInView.m */,
+			);
+			name = "Sign In";
+			sourceTree = "<group>";
+		};
+		D05DD0F31C0503A0002FD52C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */,
+				DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */,
+				DC26226E1BFE13BC00F17574 /* RCLoginView.h */,
+				DC26226F1BFE13BC00F17574 /* RCLoginView.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		D05DD0F41C0503A7002FD52C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D05DD0E91C04F3EB002FD52C /* RCRegisterViewController.h */,
+				D05DD0EA1C04F3EB002FD52C /* RCRegisterViewController.m */,
+				D05DD0EF1C04F428002FD52C /* RCRegisterView.h */,
+				D05DD0F01C04F428002FD52C /* RCRegisterView.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		DC905DD31BFA8E8900BB9B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCE62AD71BFCB5C800520556 /* Bolts.framework */,
+				DCE62AD81BFCB5C800520556 /* Parse.framework */,
+				DCE62ADA1BFCB5C800520556 /* ParseFacebookUtils.framework */,
+				DCE62ADB1BFCB5C800520556 /* ParseFacebookUtilsV4.framework */,
+				DCE62ADC1BFCB5C800520556 /* ParseTwitterUtils.framework */,
+				DCE62ADD1BFCB5C800520556 /* ParseUI.framework */,
+				DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */,
+				DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */,
+				DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */,
+				DC905DE71BFA8F0200BB9B0D /* StoreKit.framework */,
+				DC905DE51BFA8EFC00BB9B0D /* Security.framework */,
+				DC905DE31BFA8EF800BB9B0D /* QuartzCore.framework */,
+				DC905DE11BFA8EF400BB9B0D /* CoreLocation.framework */,
+				DC905DDF1BFA8EEA00BB9B0D /* CoreGraphics.framework */,
+				DC905DDD1BFA8EE400BB9B0D /* CFNetwork.framework */,
+				DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			path = "FBLA Fashion 2015";
+			sourceTree = "<group>";
+		};
+		DCF713F21BF7C32E00E5732E = {
+			isa = PBXGroup;
+			children = (
+				D05D549E1C05250800175FA0 /* Images-2.xcassets */,
+				DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */,
+				DC905DD31BFA8E8900BB9B0D /* Frameworks */,
+				DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */,
+				DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */,
+				DCF713FC1BF7C32E00E5732E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCF713FC1BF7C32E00E5732E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCF713FB1BF7C32E00E5732E /* Red Carpet.app */,
+				DCF714171BF7C32E00E5732E /* Red Carpet.xctest */,
+				DCF714221BF7C32F00E5732E /* Red Carpet.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCF713FD1BF7C32E00E5732E /* FBLA Fashion 2015 */ = {
+			isa = PBXGroup;
+			children = (
+				DC2622711BFE7FD200F17574 /* Constants.h */,
+				DC3DF02C1C0048D10012B1EF /* Constants.m */,
+				DCF714011BF7C32E00E5732E /* AppDelegate.h */,
+				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
+				D05DD0F31C0503A0002FD52C /* Login */,
+				D05DD0F21C05039A002FD52C /* Sign In */,
+				D05DD0F41C0503A7002FD52C /* Register */,
+				DCF714071BF7C32E00E5732E /* Main.storyboard */,
+				DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */,
+				DCF714121BF7C32E00E5732E /* Info.plist */,
+				DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */,
+				DCF713FE1BF7C32E00E5732E /* Supporting Files */,
+			);
+			path = "FBLA Fashion 2015";
+			sourceTree = "<group>";
+		};
+		DCF713FE1BF7C32E00E5732E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D05DD0F71C05240D002FD52C /* ios */,
+				D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */,
+				DCF713FF1BF7C32E00E5732E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCF7141A1BF7C32E00E5732E /* FBLA Fashion 2015Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF7141B1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m */,
+				DCF7141D1BF7C32E00E5732E /* Info.plist */,
+			);
+			path = "FBLA Fashion 2015Tests";
+			sourceTree = "<group>";
+		};
+		DCF714251BF7C32F00E5732E /* FBLA Fashion 2015UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DCF714261BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m */,
+				DCF714281BF7C32F00E5732E /* Info.plist */,
+			);
+			path = "FBLA Fashion 2015UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCF713FA1BF7C32E00E5732E /* Red Carpet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF7142B1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red Carpet" */;
+			buildPhases = (
+				DCF713F71BF7C32E00E5732E /* Sources */,
+				DCF713F81BF7C32E00E5732E /* Frameworks */,
+				DCF713F91BF7C32E00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red Carpet";
+			productName = "FBLA Fashion 2015";
+			productReference = DCF713FB1BF7C32E00E5732E /* Red Carpet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCF714161BF7C32E00E5732E /* Red CarpetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF7142E1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red CarpetTests" */;
+			buildPhases = (
+				DCF714131BF7C32E00E5732E /* Sources */,
+				DCF714141BF7C32E00E5732E /* Frameworks */,
+				DCF714151BF7C32E00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF714191BF7C32E00E5732E /* PBXTargetDependency */,
+			);
+			name = "Red CarpetTests";
+			productName = "FBLA Fashion 2015Tests";
+			productReference = DCF714171BF7C32E00E5732E /* Red Carpet.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DCF714211BF7C32F00E5732E /* Red CarpetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF714311BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red CarpetUITests" */;
+			buildPhases = (
+				DCF7141E1BF7C32F00E5732E /* Sources */,
+				DCF7141F1BF7C32F00E5732E /* Frameworks */,
+				DCF714201BF7C32F00E5732E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCF714241BF7C32F00E5732E /* PBXTargetDependency */,
+			);
+			name = "Red CarpetUITests";
+			productName = "FBLA Fashion 2015UITests";
+			productReference = DCF714221BF7C32F00E5732E /* Red Carpet.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCF713F31BF7C32E00E5732E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "SPYN Enterprises";
+				TargetAttributes = {
+					DCF713FA1BF7C32E00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					DCF714161BF7C32E00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = DCF713FA1BF7C32E00E5732E;
+					};
+					DCF714211BF7C32F00E5732E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = DCF713FA1BF7C32E00E5732E;
+					};
+				};
+			};
+			buildConfigurationList = DCF713F61BF7C32E00E5732E /* Build configuration list for PBXProject "Red Carpet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCF713F21BF7C32E00E5732E;
+			productRefGroup = DCF713FC1BF7C32E00E5732E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCF713FA1BF7C32E00E5732E /* Red Carpet */,
+				DCF714161BF7C32E00E5732E /* Red CarpetTests */,
+				DCF714211BF7C32F00E5732E /* Red CarpetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCF713F91BF7C32E00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05DD0F81C05240D002FD52C /* ios in Resources */,
+				D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */,
+				DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */,
+				D05D549F1C05250800175FA0 /* Images-2.xcassets in Resources */,
+				DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714151BF7C32E00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714201BF7C32F00E5732E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCF713F71BF7C32E00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */,
+				DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */,
+				DCF714001BF7C32E00E5732E /* main.m in Sources */,
+				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
+				D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */,
+				DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */,
+				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
+				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,
+				D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */,
+				DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF714131BF7C32E00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF7141C1BF7C32E00E5732E /* FBLA_Fashion_2015Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF7141E1BF7C32F00E5732E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF714271BF7C32F00E5732E /* FBLA_Fashion_2015UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCF714191BF7C32E00E5732E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF713FA1BF7C32E00E5732E /* Red Carpet */;
+			targetProxy = DCF714181BF7C32E00E5732E /* PBXContainerItemProxy */;
+		};
+		DCF714241BF7C32F00E5732E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCF713FA1BF7C32E00E5732E /* Red Carpet */;
+			targetProxy = DCF714231BF7C32F00E5732E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCF714071BF7C32E00E5732E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF714081BF7C32E00E5732E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF714101BF7C32E00E5732E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCF714291BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCF7142A1BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCF7142C1BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.Red-Carpet";
+				PRODUCT_NAME = "Red Carpet";
+			};
+			name = Debug;
+		};
+		DCF7142D1BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "FBLA Fashion 2015/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.Red-Carpet";
+				PRODUCT_NAME = "Red Carpet";
+			};
+			name = Release;
+		};
+		DCF7142F1BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "FBLA Fashion 2015Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015Tests";
+				PRODUCT_NAME = "Red Carpet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Carpet.app/Red Carpet";
+			};
+			name = Debug;
+		};
+		DCF714301BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "FBLA Fashion 2015Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015Tests";
+				PRODUCT_NAME = "Red Carpet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Carpet.app/Red Carpet";
+			};
+			name = Release;
+		};
+		DCF714321BF7C32F00E5732E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBLA Fashion 2015UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015UITests";
+				PRODUCT_NAME = "Red Carpet";
+				TEST_TARGET_NAME = "FBLA Fashion 2015";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DCF714331BF7C32F00E5732E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FBLA Fashion 2015UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.FBLA-Fashion-2015UITests";
+				PRODUCT_NAME = "Red Carpet";
+				TEST_TARGET_NAME = "FBLA Fashion 2015";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCF713F61BF7C32E00E5732E /* Build configuration list for PBXProject "Red Carpet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF714291BF7C32F00E5732E /* Debug */,
+				DCF7142A1BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF7142B1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red Carpet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF7142C1BF7C32F00E5732E /* Debug */,
+				DCF7142D1BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF7142E1BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red CarpetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF7142F1BF7C32F00E5732E /* Debug */,
+				DCF714301BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF714311BF7C32F00E5732E /* Build configuration list for PBXNativeTarget "Red CarpetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF714321BF7C32F00E5732E /* Debug */,
+				DCF714331BF7C32F00E5732E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCF7140A1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */,
+			);
+			currentVersion = DCF7140B1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodel */;
+			path = FBLA_Fashion_2015.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCF713F31BF7C32E00E5732E /* Project object */;
+}
