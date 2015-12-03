@@ -26,8 +26,7 @@
         RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
         [loginView.signInButton addTarget:self action:@selector(signIn:) forControlEvents:UIControlEventTouchUpInside];
         [loginView.registerButton addTarget:self action:@selector(newRegister:) forControlEvents:UIControlEventTouchUpInside];
-        loginView.delegate = self;
-                
+        
         self.view = loginView;
     }
     
@@ -44,7 +43,6 @@
         RCLoginView* loginView = [[RCLoginView alloc] initWithFrame:self.view.frame];
         [loginView.signInButton addTarget:self action:@selector(signIn:) forControlEvents:UIControlEventTouchUpInside];
         [loginView.registerButton addTarget:self action:@selector(newRegister:) forControlEvents:UIControlEventTouchUpInside];
-        loginView.delegate = self;
         
         self.view = loginView;
     }

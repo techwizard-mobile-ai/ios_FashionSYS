@@ -17,6 +17,4 @@
 @property UIButton* registerButton;
 @property UILabel* redCarpetLabel;
 
-@property (nonatomic, weak) RCLoginViewController* delegate;
-
 @end

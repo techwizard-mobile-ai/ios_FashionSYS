@@ -38,7 +38,7 @@
     _userName.font = [UIFont fontWithName:APP_FONT size:FONT_SIZE];
     _userName.textColor = [UIColor whiteColor];
     _userName.frame = CGRectMake(textFieldX, usernameY, textFieldWidth, [_userName sizeThatFits:CGSizeMake(500, 500)].height + BORDER_WIDTH * 3);
-    _userName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _userName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     _userName.textAlignment = NSTextAlignmentCenter;
     _userName.backgroundColor = [UIColor colorWithWhite:1 alpha:0];
     _userName.borderStyle = UITextBorderStyleRoundedRect;

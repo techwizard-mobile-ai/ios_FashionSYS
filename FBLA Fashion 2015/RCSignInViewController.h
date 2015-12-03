@@ -14,4 +14,7 @@
 
 @property (nonatomic) RCSignInView* signInView;
 
+@property UIAlertController* loginSuccessful;
+@property UIAlertController* loginFailed;
+
 @end

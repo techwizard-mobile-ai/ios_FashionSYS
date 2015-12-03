@@ -8,7 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
+#import "RCRegisterView.h"
 
-@interface RCRegisterViewController : UIViewController
+@interface RCRegisterViewController : UIViewController <UITextFieldDelegate>
+
+@property RCRegisterView* registerView;
+
+@property UIAlertController* passwordTooShort;
+@property UIAlertController* passwordsDontMatch;
+@property UIAlertController* registrationSuccessful;
+@property UIAlertController* registrationFailed;
 
 @end
