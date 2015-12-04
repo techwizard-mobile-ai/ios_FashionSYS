@@ -11,6 +11,6 @@
 
 @interface RCOutfitsController : UINavigationController <OutfitImageDelegate, UIScrollViewDelegate>
 
-@property RCOutfitsView* imageScrollView;
+@property RCOutfitsView* outfits;
 
 @end

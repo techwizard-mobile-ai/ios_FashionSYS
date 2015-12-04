@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 
-@protocol OutfitImageDelegate <NSObject>
+@protocol OutfitImageDelegate <NSObject>  //delegate to act on the button presses
 
 @required
 - (void)favorite:(id)sender;
@@ -19,10 +19,14 @@
 
 @end
 
-@interface RCOutfitImageView : UIImageView
+@interface RCOutfitImageView : UIView
+{
+    CGFloat PADDING, IMAGE_WIDTH, IMAGE_HEIGHT;
+}
 
 @property UIToolbar* actionToolBar;
-@property NSMutableArray* toolBarItems;  //array to hold the items on the toolbar
+@property NSArray* toolBarItems;  //array to hold the items on the toolbar
+@property UIImageView* imageView;
 
 @property UIBarButtonItem* favoriteButton;
 @property UIBarButtonItem* commentsButton;
@@ -30,5 +34,7 @@
 @property UIBarButtonItem* styleButton;
 
 @property (nonatomic, weak) id<OutfitImageDelegate> delegate;
+
+- (void)setImage:(UIImage*)image;  //sets the image contained in the view
 
 @end

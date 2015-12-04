@@ -22,4 +22,17 @@ NSString *const DRESS_CODE_URL = @"http://pafbla.org/downloads/12-13_Web_Posting
 
 @end
 
+@implementation UIImage (RCScheme)
+
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+@end
+
 #endif /* Constants_m */

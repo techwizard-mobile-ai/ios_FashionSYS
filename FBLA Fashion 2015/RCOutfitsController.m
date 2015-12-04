@@ -22,14 +22,14 @@
     self.title = @"Outfits";
     
     //configure scroll view for images
-    _imageScrollView = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT)];
-    _imageScrollView.delegate = self;
+    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    _outfits.delegate = self;
     
     //prevent user from moving left and right / zooming
-    _imageScrollView.imageScrollView.pinchGestureRecognizer.enabled = NO;
-    _imageScrollView.imageScrollView.panGestureRecognizer.enabled = NO;
-        
-    [self.view addSubview:_imageScrollView];
+    _outfits.imageScrollView.pinchGestureRecognizer.enabled = NO;
+    _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
+    
+    [self.view addSubview:_outfits];
     
     return self;
 }
