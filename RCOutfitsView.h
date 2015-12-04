@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
+#import "RCOutfitImageView.h"
 
-@interface RCOutfitsView : UIView
+@interface RCOutfitsView : UIView <OutfitImageDelegate>
+
+@property UIScrollView* imageScrollView;
+@property NSMutableArray* outfitImageViews;
+
+@property (nonatomic,weak) id<OutfitImageDelegate, UIScrollViewDelegate> delegate;
 
 @end

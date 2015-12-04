@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCOutfitsView.h"
 
-@interface RCOutfitsController : UINavigationController
+@interface RCOutfitsController : UINavigationController <OutfitImageDelegate, UIScrollViewDelegate>
+
+@property RCOutfitsView* imageScrollView;
 
 @end

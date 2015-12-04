@@ -19,6 +19,17 @@
     self = [super init];
     
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Outfits" image:[UIImage imageNamed:@"outfits-icon.png"] tag:1];
+    self.title = @"Outfits";
+    
+    //configure scroll view for images
+    _imageScrollView = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    _imageScrollView.delegate = self;
+    
+    //prevent user from moving left and right / zooming
+    _imageScrollView.imageScrollView.pinchGestureRecognizer.enabled = NO;
+    _imageScrollView.imageScrollView.panGestureRecognizer.enabled = NO;
+        
+    [self.view addSubview:_imageScrollView];
     
     return self;
 }
@@ -31,6 +42,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - OutfitImageDelegate Delegate Methods
+
+- (void)favorite:(id)sender
+{
+    
+}
+
+- (void)comments:(id)sender
+{
+    
+}
+
+- (void)style:(id)sender
+{
+    
+}
+
+- (void)dressCode:(id)sender
+{
+    
 }
 
 /*
