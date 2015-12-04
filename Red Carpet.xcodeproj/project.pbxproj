@@ -24,6 +24,10 @@
 		D0D3D8D51C10FBCE00721389 /* outfits-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8D41C10FBCE00721389 /* outfits-icon.png */; };
 		D0D3D8D71C10FCDF00721389 /* dress-code-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */; };
 		D0D3D8DD1C10FDC300721389 /* community-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8DC1C10FDC300721389 /* community-icon.png */; };
+		D0D3D8DF1C12426000721389 /* favorite-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8DE1C12426000721389 /* favorite-button.png */; };
+		D0D3D8E11C12427500721389 /* comments-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E01C12427500721389 /* comments-button.png */; };
+		D0D3D8E31C12428900721389 /* dress-code-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E21C12428900721389 /* dress-code-button.png */; };
+		D0D3D8E51C12429800721389 /* style-button-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E41C12429800721389 /* style-button-icon.png */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -99,6 +103,10 @@
 		D0D3D8D41C10FBCE00721389 /* outfits-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "outfits-icon.png"; sourceTree = "<group>"; };
 		D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dress-code-icon.png"; sourceTree = "<group>"; };
 		D0D3D8DC1C10FDC300721389 /* community-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community-icon.png"; sourceTree = "<group>"; };
+		D0D3D8DE1C12426000721389 /* favorite-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite-button.png"; sourceTree = "<group>"; };
+		D0D3D8E01C12427500721389 /* comments-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comments-button.png"; sourceTree = "<group>"; };
+		D0D3D8E21C12428900721389 /* dress-code-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dress-code-button.png"; sourceTree = "<group>"; };
+		D0D3D8E41C12429800721389 /* style-button-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "style-button-icon.png"; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -332,6 +340,10 @@
 				D0D3D8DC1C10FDC300721389 /* community-icon.png */,
 				D0D3D8D41C10FBCE00721389 /* outfits-icon.png */,
 				D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */,
+				D0D3D8DE1C12426000721389 /* favorite-button.png */,
+				D0D3D8E01C12427500721389 /* comments-button.png */,
+				D0D3D8E21C12428900721389 /* dress-code-button.png */,
+				D0D3D8E41C12429800721389 /* style-button-icon.png */,
 				D05DD0F71C05240D002FD52C /* ios */,
 				D05DD0E41C038C85002FD52C /* TheanoModern-Regular.ttf */,
 				DCF713FF1BF7C32E00E5732E /* main.m */,
@@ -463,10 +475,14 @@
 			files = (
 				D05DD0F81C05240D002FD52C /* ios in Resources */,
 				D05DD0E51C038CD9002FD52C /* TheanoModern-Regular.ttf in Resources */,
+				D0D3D8DF1C12426000721389 /* favorite-button.png in Resources */,
 				D0D3D8D51C10FBCE00721389 /* outfits-icon.png in Resources */,
 				D0D3D8D71C10FCDF00721389 /* dress-code-icon.png in Resources */,
 				DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */,
+				D0D3D8E31C12428900721389 /* dress-code-button.png in Resources */,
 				D0D3D8DD1C10FDC300721389 /* community-icon.png in Resources */,
+				D0D3D8E51C12429800721389 /* style-button-icon.png in Resources */,
+				D0D3D8E11C12427500721389 /* comments-button.png in Resources */,
 				D05D549F1C05250800175FA0 /* Images-2.xcassets in Resources */,
 				DCF714091BF7C32E00E5732E /* Main.storyboard in Resources */,
 			);

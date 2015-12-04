@@ -23,8 +23,6 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     
-    //TODO: Add the icon files
-    
     _favoriteButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"favorite-button-icon.png"] landscapeImagePhone:NULL style:UIBarButtonItemStylePlain target:self.delegate action:@selector(favorite:)];
     _commentsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"comments-button-icon.png"] landscapeImagePhone:NULL style:UIBarButtonItemStylePlain target:self.delegate action:@selector(comments:)];
     _dressCodeButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dress-code-button-icon.png"] landscapeImagePhone:NULL style:UIBarButtonItemStylePlain target:self.delegate action:@selector(dressCode:)];
