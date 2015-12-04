@@ -10,6 +10,18 @@
 
 @implementation RCOutfitsView
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    return self;
+}
+
+- (void)favorite
+{
+    [self.delegate favorite];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

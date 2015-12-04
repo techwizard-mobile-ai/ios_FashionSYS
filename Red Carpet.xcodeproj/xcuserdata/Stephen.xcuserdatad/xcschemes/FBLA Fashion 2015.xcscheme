@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCF713FA1BF7C32E00E5732E"
-            BuildableName = "FBLA Fashion 2015.app"
-            BlueprintName = "FBLA Fashion 2015"
-            ReferencedContainer = "container:FBLA Fashion 2015.xcodeproj">
+            BuildableName = "Red Carpet.app"
+            BlueprintName = "Red Carpet"
+            ReferencedContainer = "container:Red Carpet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCF713FA1BF7C32E00E5732E"
-            BuildableName = "FBLA Fashion 2015.app"
-            BlueprintName = "FBLA Fashion 2015"
-            ReferencedContainer = "container:FBLA Fashion 2015.xcodeproj">
+            BuildableName = "Red Carpet.app"
+            BlueprintName = "Red Carpet"
+            ReferencedContainer = "container:Red Carpet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

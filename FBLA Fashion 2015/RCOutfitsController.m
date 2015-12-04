@@ -19,6 +19,19 @@
     self = [super init];
     
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Outfits" image:[UIImage imageNamed:@"outfits-icon.png"] tag:1];
+    self.title = @"Outfits";
+    
+    //configure scroll view for images
+    _imageScrollView = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    _imageScrollView.delegate = self;
+    
+    //prevent user from moving left and right / zooming
+    _imageScrollView.imageScrollView.pinchGestureRecognizer.enabled = NO;
+    _imageScrollView.imageScrollView.panGestureRecognizer.enabled = NO;
+    
+    _imageScrollView.backgroundColor = [UIColor redColor]; //testing
+    
+    [self.view addSubview:_imageScrollView];
     
     return self;
 }

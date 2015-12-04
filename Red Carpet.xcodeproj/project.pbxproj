@@ -37,6 +37,7 @@
 		DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */; };
 		DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */; };
 		DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */; };
+		DCC75D601C11F4E100D06EDD /* RCOutfitImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */; };
 		DCE62ADE1BFCB5C800520556 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62AD71BFCB5C800520556 /* Bolts.framework */; };
 		DCE62ADF1BFCB5C800520556 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62AD81BFCB5C800520556 /* Parse.framework */; };
 		DCE62AE11BFCB5C800520556 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE62ADA1BFCB5C800520556 /* ParseFacebookUtils.framework */; };
@@ -114,6 +115,8 @@
 		DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCLoginViewController.h; path = ../RCLoginViewController.h; sourceTree = "<group>"; };
 		DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCLoginViewController.m; path = ../RCLoginViewController.m; sourceTree = "<group>"; };
+		DCC75D5E1C11F4E100D06EDD /* RCOutfitImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOutfitImageView.h; sourceTree = "<group>"; };
+		DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOutfitImageView.m; sourceTree = "<group>"; };
 		DCE62AD71BFCB5C800520556 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		DCE62AD81BFCB5C800520556 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
 		DCE62ADA1BFCB5C800520556 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				D0D3D8C71C10E1FB00721389 /* RCOutfitsController.m */,
 				D0D3D8BC1C10E13400721389 /* RCOutfitsView.h */,
 				D0D3D8BD1C10E13400721389 /* RCOutfitsView.m */,
+				DCC75D5E1C11F4E100D06EDD /* RCOutfitImageView.h */,
+				DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */,
 			);
 			name = Outfits;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				D0D3D8B81C10DD4200721389 /* RCMainTabController.m in Sources */,
 				DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */,
 				DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */,
+				DCC75D601C11F4E100D06EDD /* RCOutfitImageView.m in Sources */,
 				DCF714001BF7C32E00E5732E /* main.m in Sources */,
 				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
 				D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */,
