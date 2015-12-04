@@ -12,16 +12,17 @@
 @protocol OutfitImageDelegate <NSObject>
 
 @required
-- (void)favorite;
-- (void)comments;
-- (void)dressCode;
-- (void)style;
+- (void)favorite:(id)sender;
+- (void)comments:(id)sender;
+- (void)dressCode:(id)sender;
+- (void)style:(id)sender;
 
 @end
 
 @interface RCOutfitImageView : UIImageView
 
 @property UIToolbar* actionToolBar;
+@property NSMutableArray* toolBarItems;  //array to hold the items on the toolbar
 
 @property UIBarButtonItem* favoriteButton;
 @property UIBarButtonItem* commentsButton;

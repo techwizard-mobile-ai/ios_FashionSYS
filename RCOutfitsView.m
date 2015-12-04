@@ -14,12 +14,31 @@
 {
     self = [super initWithFrame:frame];
     
+    
+    
     return self;
 }
 
-- (void)favorite
+#pragma mark - OutfitImageDelegate methods
+
+- (void)favorite:sender
 {
-    [self.delegate favorite];
+    [self.delegate favorite:sender];
+}
+
+- (void)comments:sender
+{
+    [self.delegate comments:sender];
+}
+
+- (void)dressCode:sender
+{
+    [self.delegate dressCode:sender];
+}
+
+- (void)style:sender
+{
+    [self.delegate style:sender];
 }
 
 /*

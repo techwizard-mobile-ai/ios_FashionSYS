@@ -28,9 +28,7 @@
     //prevent user from moving left and right / zooming
     _imageScrollView.imageScrollView.pinchGestureRecognizer.enabled = NO;
     _imageScrollView.imageScrollView.panGestureRecognizer.enabled = NO;
-    
-    _imageScrollView.backgroundColor = [UIColor redColor]; //testing
-    
+        
     [self.view addSubview:_imageScrollView];
     
     return self;
@@ -44,6 +42,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - OutfitImageDelegate Delegate Methods
+
+- (void)favorite:(id)sender
+{
+    
+}
+
+- (void)comments:(id)sender
+{
+    
+}
+
+- (void)style:(id)sender
+{
+    
+}
+
+- (void)dressCode:(id)sender
+{
+    
 }
 
 /*
