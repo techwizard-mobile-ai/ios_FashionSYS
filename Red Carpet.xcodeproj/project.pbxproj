@@ -419,6 +419,7 @@
 				TargetAttributes = {
 					DCF713FA1BF7C32E00E5732E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 3KMK4H3647;
 					};
 					DCF714161BF7C32E00E5732E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -642,6 +643,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -650,6 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.Red-Carpet";
 				PRODUCT_NAME = "Red Carpet";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -657,6 +661,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -665,6 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.spyn.Red-Carpet";
 				PRODUCT_NAME = "Red Carpet";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
