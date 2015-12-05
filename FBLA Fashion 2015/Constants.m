@@ -56,6 +56,27 @@ NSString *const APP_TITLE = @"RED CARPET";
     self.imageEdgeInsets = UIEdgeInsetsMake(- (titleSize.height + spacing), 0.0, 0.0, - titleSize.width);
 }
 
+@end
+
+@implementation Parse (RCScheme)
+
++ (int)getCurrentPhotoCount
+{
+    //prepare the query for the Counts object with the ID for the number of pictures object
+    PFQuery* query = [PFQuery queryWithClassName:@"Counts"];
+    PFObject* countObject = [query getObjectWithId:@"M2tSY3bnl9"];
+
+    return [[countObject objectForKey:@"numberOfPictures"] intValue];  //extract the value, convert to int, and return
+}
+
++ (void)incrementPhotoCount
+{
+    PFQuery* query = [PFQuery queryWithClassName:@"Counts"];
+    PFObject* photoCount = [query getObjectWithId:@"M2tSY3bnl9"];  //create the object for the count
+    photoCount[@"numberOfPictures"] = @([Parse getCurrentPhotoCount] + 1);  //increment the number of pictures
+    
+    [photoCount saveInBackground];
+}
 
 @end
 

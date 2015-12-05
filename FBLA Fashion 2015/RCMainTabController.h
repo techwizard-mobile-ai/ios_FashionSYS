@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RCDressCodeController.h"
 #import "RCOutfitsController.h"
-#import "RCCommunityController.h"
+#import "RCUploadController.h"
 
 @interface RCMainTabController : UITabBarController
 

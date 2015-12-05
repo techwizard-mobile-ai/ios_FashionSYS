@@ -18,7 +18,7 @@
 {
     self = [super init];
     
-    self.viewControllers = [NSArray arrayWithObjects:[[RCOutfitsController alloc] init], [[RCCommunityController alloc] init], [[RCDressCodeController alloc] init], nil];
+    self.viewControllers = [NSArray arrayWithObjects:[[RCOutfitsController alloc] init], [[RCUploadController alloc] init], [[RCDressCodeController alloc] init], nil];
     self.tabBar.backgroundColor = [UIColor whiteColor];
     self.tabBar.opaque = TRUE;
     

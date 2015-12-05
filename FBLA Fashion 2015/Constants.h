@@ -47,6 +47,12 @@ extern NSString* const APP_TITLE;
 
 @end
 
+@interface Parse (RCScheme)
+
++ (int)getCurrentPhotoCount;
++ (void)incrementPhotoCount;
+
+@end
 
 // Names
 

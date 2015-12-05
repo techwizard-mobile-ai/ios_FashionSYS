@@ -30,6 +30,9 @@
 		D0D3D8E51C12429800721389 /* style-button-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E41C12429800721389 /* style-button-icon.png */; };
 		D0D3D8E71C1348CD00721389 /* favorite-button-icon-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E61C1348CD00721389 /* favorite-button-icon-selected.png */; };
 		D0D3D8EA1C135A5900721389 /* BorderMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8E91C135A5900721389 /* BorderMaker.m */; };
+		D0D3D8ED1C1376E000721389 /* RCUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8EC1C1376E000721389 /* RCUploadController.m */; };
+		D0D3D8F01C1376F200721389 /* RCUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8EF1C1376F200721389 /* RCUploadView.m */; };
+		D0D3D8F41C137DAC00721389 /* upload-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8F31C137DAC00721389 /* upload-icon.png */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -117,6 +120,11 @@
 		D0D3D8E61C1348CD00721389 /* favorite-button-icon-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite-button-icon-selected.png"; sourceTree = "<group>"; };
 		D0D3D8E81C135A5900721389 /* BorderMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderMaker.h; sourceTree = "<group>"; };
 		D0D3D8E91C135A5900721389 /* BorderMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderMaker.m; sourceTree = "<group>"; };
+		D0D3D8EB1C1376E000721389 /* RCUploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUploadController.h; sourceTree = "<group>"; };
+		D0D3D8EC1C1376E000721389 /* RCUploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUploadController.m; sourceTree = "<group>"; };
+		D0D3D8EE1C1376F200721389 /* RCUploadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUploadView.h; sourceTree = "<group>"; };
+		D0D3D8EF1C1376F200721389 /* RCUploadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUploadView.m; sourceTree = "<group>"; };
+		D0D3D8F31C137DAC00721389 /* upload-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-icon.png"; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -242,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				D0D3D8CD1C10E26D00721389 /* Outfits */,
-				D0D3D8CC1C10E26200721389 /* Community */,
+				D0D3D8F11C1376F900721389 /* Upload */,
 				D0D3D8D11C10E29300721389 /* Dress Code */,
 			);
 			name = "Main App";
@@ -281,6 +289,25 @@
 				D0D3D8C31C10E1BF00721389 /* RCDressCodeView.m */,
 			);
 			name = "Dress Code";
+			sourceTree = "<group>";
+		};
+		D0D3D8F11C1376F900721389 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3D8EB1C1376E000721389 /* RCUploadController.h */,
+				D0D3D8EC1C1376E000721389 /* RCUploadController.m */,
+				D0D3D8EE1C1376F200721389 /* RCUploadView.h */,
+				D0D3D8EF1C1376F200721389 /* RCUploadView.m */,
+			);
+			name = Upload;
+			sourceTree = "<group>";
+		};
+		D0D3D8F21C13770B00721389 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3D8CC1C10E26200721389 /* Community */,
+			);
+			name = Legacy;
 			sourceTree = "<group>";
 		};
 		DC905DD31BFA8E8900BB9B0D /* Frameworks */ = {
@@ -353,6 +380,7 @@
 				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
 				D0D3D8B61C10DD4200721389 /* RCMainTabController.h */,
 				D0D3D8B71C10DD4200721389 /* RCMainTabController.m */,
+				D0D3D8F21C13770B00721389 /* Legacy */,
 				D05DD0F31C0503A0002FD52C /* Login */,
 				DCF714071BF7C32E00E5732E /* Main.storyboard */,
 				DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */,
@@ -367,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC75D611C1250A200D06EDD /* Outfits */,
+				D0D3D8F31C137DAC00721389 /* upload-icon.png */,
 				D0D3D8DC1C10FDC300721389 /* community-icon.png */,
 				D0D3D8D41C10FBCE00721389 /* outfits-icon.png */,
 				D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */,
@@ -514,6 +543,7 @@
 				DCC75D691C1250A200D06EDD /* outfit3.png in Resources */,
 				DCF714111BF7C32E00E5732E /* LaunchScreen.storyboard in Resources */,
 				DCC75D6A1C1250A200D06EDD /* outfit4.jpg in Resources */,
+				D0D3D8F41C137DAC00721389 /* upload-icon.png in Resources */,
 				D0D3D8E31C12428900721389 /* dress-code-button-icon.png in Resources */,
 				D0D3D8DD1C10FDC300721389 /* community-icon.png in Resources */,
 				DCC75D6B1C1250A200D06EDD /* outfit5.jpg in Resources */,
@@ -563,6 +593,8 @@
 				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
 				D0D3D8C41C10E1BF00721389 /* RCDressCodeView.m in Sources */,
 				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,
+				D0D3D8F01C1376F200721389 /* RCUploadView.m in Sources */,
+				D0D3D8ED1C1376E000721389 /* RCUploadController.m in Sources */,
 				D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */,
 				DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */,
 			);

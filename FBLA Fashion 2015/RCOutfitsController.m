@@ -30,7 +30,7 @@
     _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
     _outfits.imageScrollView.scrollEnabled = YES;
     
-    [self addSampleImages];
+    [self addImages];
     
     [self.view addSubview:_outfits];
     
@@ -48,7 +48,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addSampleImages  //retrieves the sample images off of parse
+- (void)addImages  //retrieves the images off of parse
 {
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];  //query to class
     
@@ -87,17 +87,6 @@
     
 }
 
-- (void)uploadImageToParse:(UIImage*)image named:(NSString*)imageName;
-{
-    //upload the image to Parse
-    NSData* imageData = UIImagePNGRepresentation(image);
-    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"] data:imageData];
-    
-    PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"];
-    userPhoto[@"imageFile"] = imageFile;
-    [userPhoto saveInBackground];
-}
 
 #pragma mark - OutfitImageDelegate Delegate Methods
 
