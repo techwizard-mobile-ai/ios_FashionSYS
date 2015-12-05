@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "BorderMaker.h"
 
 @protocol OutfitImageDelegate <NSObject>  //delegate to act on the button presses
 
@@ -24,14 +25,14 @@
     CGFloat PADDING, IMAGE_WIDTH, IMAGE_HEIGHT;
 }
 
-@property UIToolbar* actionToolBar;
+@property UIView* actionToolBar;
 @property NSArray* toolBarItems;  //array to hold the items on the toolbar
 @property UIImageView* imageView;
 
-@property UIBarButtonItem* favoriteButton;
-@property UIBarButtonItem* commentsButton;
-@property UIBarButtonItem* dressCodeButton;
-@property UIBarButtonItem* styleButton;
+@property UIButton* favoriteButton;
+@property UIButton* commentsButton;
+@property UIButton* dressCodeButton;
+@property UIButton* styleButton;
 
 @property (nonatomic, weak) id<OutfitImageDelegate> delegate;
 

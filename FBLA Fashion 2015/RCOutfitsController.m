@@ -22,12 +22,13 @@
     self.title = @"Outfits";
     
     //configure scroll view for images
-    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT)];
     _outfits.delegate = self;
     
     //prevent user from moving left and right / zooming
     _outfits.imageScrollView.pinchGestureRecognizer.enabled = NO;
     _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
+    _outfits.imageScrollView.scrollEnabled = YES;
     
     [self.view addSubview:_outfits];
     
@@ -65,6 +66,15 @@
 {
     
 }
+
+#pragma mark - TabBarDelegate methods
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    NSLog(@"tab bar item pressed");
+}
+
+
 
 /*
 #pragma mark - Navigation

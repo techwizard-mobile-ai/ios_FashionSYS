@@ -28,6 +28,8 @@
 		D0D3D8E11C12427500721389 /* comments-button-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E01C12427500721389 /* comments-button-icon.png */; };
 		D0D3D8E31C12428900721389 /* dress-code-button-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E21C12428900721389 /* dress-code-button-icon.png */; };
 		D0D3D8E51C12429800721389 /* style-button-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E41C12429800721389 /* style-button-icon.png */; };
+		D0D3D8E71C1348CD00721389 /* favorite-button-icon-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8E61C1348CD00721389 /* favorite-button-icon-selected.png */; };
+		D0D3D8EA1C135A5900721389 /* BorderMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8E91C135A5900721389 /* BorderMaker.m */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -112,6 +114,9 @@
 		D0D3D8E01C12427500721389 /* comments-button-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comments-button-icon.png"; sourceTree = "<group>"; };
 		D0D3D8E21C12428900721389 /* dress-code-button-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dress-code-button-icon.png"; sourceTree = "<group>"; };
 		D0D3D8E41C12429800721389 /* style-button-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "style-button-icon.png"; sourceTree = "<group>"; };
+		D0D3D8E61C1348CD00721389 /* favorite-button-icon-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite-button-icon-selected.png"; sourceTree = "<group>"; };
+		D0D3D8E81C135A5900721389 /* BorderMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderMaker.h; sourceTree = "<group>"; };
+		D0D3D8E91C135A5900721389 /* BorderMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderMaker.m; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -340,6 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				D0D3D8C51C10E1DA00721389 /* Main App */,
+				D0D3D8E81C135A5900721389 /* BorderMaker.h */,
+				D0D3D8E91C135A5900721389 /* BorderMaker.m */,
 				DC2622711BFE7FD200F17574 /* Constants.h */,
 				DC3DF02C1C0048D10012B1EF /* Constants.m */,
 				DCF714011BF7C32E00E5732E /* AppDelegate.h */,
@@ -364,6 +371,7 @@
 				D0D3D8D41C10FBCE00721389 /* outfits-icon.png */,
 				D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */,
 				D0D3D8DE1C12426000721389 /* favorite-button-icon.png */,
+				D0D3D8E61C1348CD00721389 /* favorite-button-icon-selected.png */,
 				D0D3D8E01C12427500721389 /* comments-button-icon.png */,
 				D0D3D8E21C12428900721389 /* dress-code-button-icon.png */,
 				D0D3D8E41C12429800721389 /* style-button-icon.png */,
@@ -509,6 +517,7 @@
 				D0D3D8E31C12428900721389 /* dress-code-button-icon.png in Resources */,
 				D0D3D8DD1C10FDC300721389 /* community-icon.png in Resources */,
 				DCC75D6B1C1250A200D06EDD /* outfit5.jpg in Resources */,
+				D0D3D8E71C1348CD00721389 /* favorite-button-icon-selected.png in Resources */,
 				D0D3D8E51C12429800721389 /* style-button-icon.png in Resources */,
 				D0D3D8E11C12427500721389 /* comments-button-icon.png in Resources */,
 				D05D549F1C05250800175FA0 /* Images-2.xcassets in Resources */,
@@ -550,6 +559,7 @@
 				D0D3D8C11C10E1AB00721389 /* RCCommunityView.m in Sources */,
 				D0D3D8D01C10E28600721389 /* RCDressCodeController.m in Sources */,
 				DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */,
+				D0D3D8EA1C135A5900721389 /* BorderMaker.m in Sources */,
 				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
 				D0D3D8C41C10E1BF00721389 /* RCDressCodeView.m in Sources */,
 				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,

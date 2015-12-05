@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RCOutfitsView.h"
 
-@interface RCOutfitsController : UINavigationController <OutfitImageDelegate, UIScrollViewDelegate>
+@interface RCOutfitsController : UINavigationController <OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate>
 
 @property RCOutfitsView* outfits;
 

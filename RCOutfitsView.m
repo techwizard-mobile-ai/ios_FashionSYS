@@ -16,13 +16,11 @@
     
     _outfitImageViews = [[NSMutableArray alloc] init];
     
-    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, frame.size.height)];
     
     //testing
-    RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT)];
-    imageView.delegate = self;
-    [imageView setImage:[UIImage imageNamed:@"outfit1.png"]];
-    [self addOutfit:imageView];
+    [self addOutfitWithImageNamed:@"outfit1.jpg"];
+    [self addOutfitWithImageNamed:@"outfit2.jpg"];
     
     [self addSubview:_imageScrollView];  //add the scroll view to the view
     
@@ -33,11 +31,20 @@
 {
     [_outfitImageViews addObject:outfit];  //add the outfit to the data source
     
-    outfit.frame = CGRectMake(outfit.frame.origin.x, outfit.frame.origin.y + _imageScrollView.frame.size.height, AVAILABLE_WIDTH, outfit.frame.size.height);  //set frame to be end of current scrollview
+    outfit.frame = CGRectMake(outfit.frame.origin.x, outfit.frame.origin.y + _imageScrollView.contentSize.height, _imageScrollView.contentSize.width, outfit.frame.size.height);  //set frame to be end of current scrollview by moving y-coordinate down
     
-    _imageScrollView.frame = CGRectMake(_imageScrollView.frame.origin.x, _imageScrollView.frame.origin.y, _imageScrollView.frame.size.width + outfit.frame.size.width, _imageScrollView.frame.size.height + outfit.frame.size.height);  //extend the scroll view too accomdate the new image
+    _imageScrollView.contentSize = CGSizeMake(_imageScrollView.contentSize.width, _imageScrollView.contentSize.height + outfit.frame.size.height);  //extend the scroll view to accomdate the new image
+    //_imageScrollView.frame = CGRectMake(_imageScrollView.frame.origin.x, _imageScrollView.frame.origin.y, _imageScrollView.contentSize.width, _imageScrollView.contentSize.height);
     
     [_imageScrollView addSubview:outfit];  //add the new image to the view
+}
+
+- (void)addOutfitWithImageNamed:(NSString*)imageName
+{
+    RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    imageView.delegate = self;
+    [imageView setImage:[UIImage imageNamed:imageName]];
+    [self addOutfit:imageView];
 }
 
 #pragma mark - OutfitImageDelegate methods
@@ -60,6 +67,13 @@
 - (void)style:sender
 {
     [self.delegate style:sender];
+}
+
+#pragma mark - UITabBarDelegate Methods
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    [self.delegate tabBar:tabBar didSelectItem:item];
 }
 
 /*
