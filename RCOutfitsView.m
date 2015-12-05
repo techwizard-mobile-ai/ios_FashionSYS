@@ -38,7 +38,7 @@
 - (void)addOutfitWithImage:(UIImage*)image
 {
     //configure the image view
-    RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT)];
+    RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, _imageScrollView.frame.size.height)];
     imageView.delegate = self;
     [imageView setImage:image];
     

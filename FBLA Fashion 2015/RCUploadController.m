@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -55,13 +56,12 @@
 
 - (void)uploadImageToParse:(UIImage*)image named:(NSString*)imageName;
 {
-    image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(640, 640)];  //scale the image to make < 10 MB
-    NSData* imageData = UIImagePNGRepresentation(image);  //dump raw PNG data
+    NSData* imageData = UIImageJPEGRepresentation(image, 1.0);  //dump raw JPG data
     
-    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"] data:imageData];  //create the parse file
+    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".jpg"] data:imageData];  //create the parse file
     
     PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];  //create parse object
-    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"];  //ensure PNG file name
+    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".jpg"];  //ensure PNG file name
     userPhoto[@"imageFile"] = imageFile;  //set the image file
     
     //save the image

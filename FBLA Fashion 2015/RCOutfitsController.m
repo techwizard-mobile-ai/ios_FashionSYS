@@ -21,8 +21,17 @@
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Outfits" image:[UIImage imageNamed:@"outfits-icon.png"] tag:1];
     self.title = @"Outfits";
     
+    
+    //configure the refresh button
+    _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, TAB_BAR_HEIGHT / 2.0)];
+    _refreshButton.backgroundColor = [UIColor RCBackgroundColor];
+    [_refreshButton setTitle:@"Refresh Images" forState:UIControlStateNormal];
+    [_refreshButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_refreshButton addTarget:self action:@selector(updateImages) forControlEvents:UIControlEventTouchUpInside];
+    [_refreshButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    
     //configure scroll view for images
-    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT)];
+    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
     _outfits.delegate = self;
     
     //prevent user from moving left and right / zooming
@@ -30,9 +39,16 @@
     _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
     _outfits.imageScrollView.scrollEnabled = YES;
     
+    //add the images stored in Parse
     [self addImages];
     
+    //create activity spinner
+    _uploadSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [_uploadSpinner setCenter:CGPointMake(AVAILABLE_WIDTH / 2.0, self.view.frame.size.height / 2.0)];
+    [self.view addSubview:_uploadSpinner];
+    
     [self.view addSubview:_outfits];
+    [self.view addSubview:_refreshButton];
     
     return self;
 }
@@ -62,7 +78,7 @@
             for (PFObject* object in objects)
             {
                 PFFile* imageFile = object[@"imageFile"];
-   
+                
                 //download the image specified by the object
                 [imageFile getDataInBackgroundWithBlock:^(NSData* imageData, NSError* error) {
                     if(!error)
@@ -75,7 +91,7 @@
                     {
                         NSLog(@"ERROR: %@", error);
                     }
-                 }];
+                }];
             }
         }
         
@@ -85,6 +101,55 @@
         }
     }];
     
+}
+
+- (void)updateImages
+{
+    [_uploadSpinner startAnimating];
+    
+    int photoDifference = [Parse getCurrentPhotoCount] - [_outfits.outfitImageViews count];
+    
+    if(photoDifference > 0)
+    {
+        PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+        
+        [query whereKey:@"imageName" containsString:@"outfit"];
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            for (PFObject* object in objects) {
+                
+                NSString* imageName = object[@"imageName"];
+                
+                if([[[imageName stringByDeletingPathExtension] stringByReplacingOccurrencesOfString:@"outfit" withString:@""] integerValue] > [_outfits.outfitImageViews count]) //if the image file name has a number greater than the current amount displayed
+                {
+                    PFFile* imageFile = object[@"imageFile"];
+                    
+                    //download the image specified by the object
+                    [imageFile getDataInBackgroundWithBlock:^(NSData* imageData, NSError* error) {
+                        if(!error)
+                        {
+                            //convert the image data into a uiimage and add it to the outfits
+                            UIImage* image = [UIImage imageWithData:imageData];
+                            [_outfits addOutfitWithImage:image];
+                        }
+                        else
+                        {
+                            NSLog(@"ERROR: %@", error);
+                        }
+                    }];
+                }
+            }
+            
+            [_uploadSpinner stopAnimating];
+            
+        }];
+    }
+    
+    _refreshButton.backgroundColor = [UIColor greenColor];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        _refreshButton.backgroundColor = [UIColor RCBackgroundColor];
+    }];
 }
 
 
@@ -120,13 +185,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

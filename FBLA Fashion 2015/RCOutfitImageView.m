@@ -29,8 +29,8 @@
     
     CGFloat buttonWidth = toolBarWidth / 4.0;
     
-    IMAGE_WIDTH = AVAILABLE_WIDTH;
-    IMAGE_HEIGHT = AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - toolBarHeight - TAB_BAR_HEIGHT;
+    IMAGE_WIDTH = frame.size.width;
+    IMAGE_HEIGHT = frame.size.height - toolBarHeight;
     
     CGFloat imageViewX = DEFAULT_X;
     CGFloat imageViewY = 0;

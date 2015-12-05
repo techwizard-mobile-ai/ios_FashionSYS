@@ -12,5 +12,7 @@
 @interface RCOutfitsController : UINavigationController <OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate>
 
 @property RCOutfitsView* outfits;
+@property UIButton* refreshButton;
+@property UIActivityIndicatorView* uploadSpinner;
 
 @end
