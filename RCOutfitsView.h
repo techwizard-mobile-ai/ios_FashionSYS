@@ -10,15 +10,15 @@
 #import "Constants.h"
 #import "RCOutfitImageView.h"
 
-@interface RCOutfitsView : UIView <OutfitImageDelegate, UITabBarDelegate>
+@interface RCOutfitsView : UIView <UITabBarDelegate>
 
 @property UIScrollView* imageScrollView;
 @property NSMutableArray* outfitImageViews;
 
-@property (nonatomic,weak) id<OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate> delegate;
+@property (nonatomic,weak) id<UIScrollViewDelegate, UITabBarDelegate> delegate;
 
-- (void)addOutfit:(RCOutfitImageView*)outfit;
-- (void)addOutfitWithImage:(UIImage*)image;
+//- (void)addOutfit:(RCOutfitImageView*)outfit;
+- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number;
 
 
 @end

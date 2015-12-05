@@ -14,9 +14,17 @@
 {
     self = [super initWithFrame:frame];
     
+    self.userInteractionEnabled = YES;
+    
     _outfitImageViews = [[NSMutableArray alloc] init];
     
-    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, frame.size.height)];
+    _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+    _imageScrollView.delaysContentTouches = NO;
+    _imageScrollView.canCancelContentTouches = NO;
+    _imageScrollView.pinchGestureRecognizer.enabled = NO;
+    _imageScrollView.panGestureRecognizer.enabled = NO;
+    _imageScrollView.scrollEnabled = YES;
+    _imageScrollView.userInteractionEnabled = YES;
     
     [self addSubview:_imageScrollView];  //add the scroll view to the view
     
@@ -35,37 +43,17 @@
     [_imageScrollView addSubview:outfit];  //add the new image to the view
 }
 
-- (void)addOutfitWithImage:(UIImage*)image
+- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number
 {
     //configure the image view
     RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, _imageScrollView.frame.size.height)];
-    imageView.delegate = self;
+    imageView.delegate = delegate;
+    imageView.imageNumber = number;
+    imageView.userInteractionEnabled = YES;
     [imageView setImage:image];
     
     //add the imageview to the scrollview
     [self addOutfit:imageView];
-}
-
-#pragma mark - OutfitImageDelegate methods
-
-- (void)favorite:sender
-{
-    [self.delegate favorite:sender];
-}
-
-- (void)comments:sender
-{
-    [self.delegate comments:sender];
-}
-
-- (void)dressCode:sender
-{
-    [self.delegate dressCode:sender];
-}
-
-- (void)style:sender
-{
-    [self.delegate style:sender];
 }
 
 #pragma mark - UITabBarDelegate Methods

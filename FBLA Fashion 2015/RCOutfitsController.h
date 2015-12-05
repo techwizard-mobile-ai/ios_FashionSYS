@@ -15,4 +15,10 @@
 @property UIButton* refreshButton;
 @property UIActivityIndicatorView* uploadSpinner;
 
+- (void)favorite:(RCOutfitImageView*)sender;
+- (void)comments:(RCOutfitImageView*)sender;
+- (void)style:(RCOutfitImageView*)sender;
+- (void)dressCode:(RCOutfitImageView*)sender;
+
+
 @end

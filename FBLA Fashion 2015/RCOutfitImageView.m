@@ -15,6 +15,7 @@
 {
     self = [super initWithFrame:frame];
     
+    self.userInteractionEnabled = YES;
     
     //UI Constants
     CGFloat toolBarHeight = TAB_BAR_HEIGHT;
@@ -61,31 +62,31 @@
     [BorderMaker makeBorder:_favoriteButton side:RIGHT size:1 color:[UIColor whiteColor]];
     [BorderMaker makeBorder:_commentsButton side:RIGHT size:1 color:[UIColor whiteColor]];
     [BorderMaker makeBorder:_dressCodeButton side:RIGHT size:1 color:[UIColor whiteColor]];
-    
-//    [_favoriteButton centerVertically];
-//    [_commentsButton centerVertically];
-//    [_dressCodeButton centerVertically];
-//    [_styleButton centerVertically];
 
     _favoriteButton.imageView.contentMode = UIViewContentModeCenter;
     _commentsButton.imageView.contentMode = UIViewContentModeCenter;
     _dressCodeButton.imageView.contentMode = UIViewContentModeCenter;
     _styleButton.imageView.contentMode = UIViewContentModeCenter;
-
     
-    //configure button items & supress warnings for undeclared selector - the delegate has the selector
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    
-#pragma clang diagnostic pop
+    [_favoriteButton addTarget:self action:@selector(favoriteTapped) forControlEvents:UIControlEventTouchUpInside];
+    [_commentsButton addTarget:self action:@selector(commentsTapped) forControlEvents:UIControlEventTouchUpInside];
+    [_dressCodeButton addTarget:self action:@selector(dressCodeTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [_styleButton addTarget:self action:@selector(styleTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     //configure toolbar
-    _actionToolBar = [[UITabBar alloc] initWithFrame:CGRectMake(DEFAULT_X, toolBarY, toolBarWidth, toolBarHeight)];
+    _actionToolBar = [[UIView alloc] initWithFrame:CGRectMake(DEFAULT_X, toolBarY, toolBarWidth, toolBarHeight)];
+    _actionToolBar.userInteractionEnabled = YES;
     
     [_actionToolBar addSubview:_favoriteButton];
     [_actionToolBar addSubview:_commentsButton];
     [_actionToolBar addSubview:_dressCodeButton];
     [_actionToolBar addSubview:_styleButton];
+    
+    _favoriteButton.userInteractionEnabled = YES;
+    _commentsButton.userInteractionEnabled = YES;
+    _dressCodeButton.userInteractionEnabled = YES;
+    _styleButton.userInteractionEnabled = YES;
+
     
     [self addSubview:_actionToolBar];  //add the toolbar to the container
     
@@ -97,6 +98,7 @@
     
     //configure imageview
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imageViewX, imageViewY, imageViewWidth, imageViewHeight)];
+    _imageView.userInteractionEnabled = YES;
     
     [self addSubview:_imageView];  //add the image to the container
     
@@ -117,6 +119,21 @@
 - (void)setImage:(UIImage *)image
 {
     self.imageView.image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(IMAGE_WIDTH, IMAGE_HEIGHT)];
+}
+
+- (void)favoriteTapped
+{
+    NSLog(@"button tapped");
+    
+    [self.delegate favorite:self];
+
+}
+
+- (void)commentsTapped
+{
+    NSLog(@"button tapped");
+
+    [self.delegate comments:self];
 }
 
 /*

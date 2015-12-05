@@ -33,12 +33,9 @@
     //configure scroll view for images
     _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
     _outfits.delegate = self;
-    
-    //prevent user from moving left and right / zooming
-    _outfits.imageScrollView.pinchGestureRecognizer.enabled = NO;
-    _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
-    _outfits.imageScrollView.scrollEnabled = YES;
-    
+    _outfits.userInteractionEnabled = YES;
+    _outfits.imageScrollView.delegate = self;
+
     //add the images stored in Parse
     [self addImages];
     
@@ -85,7 +82,7 @@
                     {
                         //convert the image data into a uiimage and add it to the outfits
                         UIImage* image = [UIImage imageWithData:imageData];
-                        [_outfits addOutfitWithImage:image];
+                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object]];
                     }
                     else
                     {
@@ -118,9 +115,7 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
             for (PFObject* object in objects) {
                 
-                NSString* imageName = object[@"imageName"];
-                
-                if([[[imageName stringByDeletingPathExtension] stringByReplacingOccurrencesOfString:@"outfit" withString:@""] integerValue] > [_outfits.outfitImageViews count]) //if the image file name has a number greater than the current amount displayed
+                if([self extractOutfitNumber:object] > [_outfits.outfitImageViews count]) //if the image file name has a number greater than the current amount displayed
                 {
                     PFFile* imageFile = object[@"imageFile"];
                     
@@ -130,7 +125,7 @@
                         {
                             //convert the image data into a uiimage and add it to the outfits
                             UIImage* image = [UIImage imageWithData:imageData];
-                            [_outfits addOutfitWithImage:image];
+                            [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object]];
                         }
                         else
                         {
@@ -152,27 +147,34 @@
     }];
 }
 
-
-#pragma mark - OutfitImageDelegate Delegate Methods
-
-- (void)favorite:(id)sender
+- (NSUInteger)extractOutfitNumber:(PFObject*)object
 {
+    NSString* imageName = object[@"imageName"];
     
+    return [[[imageName stringByDeletingPathExtension] stringByReplacingOccurrencesOfString:@"outfit" withString:@""] integerValue];
+
 }
 
-- (void)comments:(id)sender
+#pragma mark - OutfitImageView Methods
+
+- (void)favorite:(RCOutfitImageView*)sender
 {
-    
+    NSLog(@"favorite");
 }
 
-- (void)style:(id)sender
+- (void)comments:(RCOutfitImageView*)sender
 {
-    
+    NSLog(@"comments");
 }
 
-- (void)dressCode:(id)sender
+- (void)style:(RCOutfitImageView*)sender
 {
-    
+    NSLog(@"style");
+}
+
+- (void)dressCode:(RCOutfitImageView*)sender
+{
+    NSLog(@"dresscode");
 }
 
 #pragma mark - TabBarDelegate methods
@@ -181,8 +183,6 @@
 {
     NSLog(@"tab bar item pressed");
 }
-
-
 
 /*
  #pragma mark - Navigation

@@ -10,13 +10,18 @@
 #import "Constants.h"
 #import "BorderMaker.h"
 
+@class RCOutfitImageView;
+
 @protocol OutfitImageDelegate <NSObject>  //delegate to act on the button presses
 
 @required
-- (void)favorite:(id)sender;
-- (void)comments:(id)sender;
-- (void)dressCode:(id)sender;
-- (void)style:(id)sender;
+- (void)favorite:(RCOutfitImageView*)sender;
+@required
+- (void)comments:(RCOutfitImageView*)sender;
+@required
+- (void)dressCode:(RCOutfitImageView*)sender;
+@required
+- (void)style:(RCOutfitImageView*)sender;
 
 @end
 
@@ -26,8 +31,8 @@
 }
 
 @property UIView* actionToolBar;
-@property NSArray* toolBarItems;  //array to hold the items on the toolbar
 @property UIImageView* imageView;
+@property NSUInteger imageNumber;
 
 @property UIButton* favoriteButton;
 @property UIButton* commentsButton;
