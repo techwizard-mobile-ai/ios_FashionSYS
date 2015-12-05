@@ -12,5 +12,7 @@
 @interface RCUploadController : UIViewController <RCUploadImageProtocol, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property RCUploadView* uploadView;
+@property UIAlertController* successAlert;
+@property UIActivityIndicatorView* uploadSpinner;
 
 @end

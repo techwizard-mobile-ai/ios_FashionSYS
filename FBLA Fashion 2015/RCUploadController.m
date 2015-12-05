@@ -25,6 +25,11 @@
     self.tabBarItem.title = @"Upload";
     self.tabBarItem.image = [UIImage imageNamed:@"upload-icon.png"];
     
+    //configure success alert if image upload succeeds
+    _successAlert = [UIAlertController alertControllerWithTitle:@"Success" message:@"Your image has been uploaded" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [_successAlert addAction:ok];
+    
     [self.view addSubview:_uploadView];
     
     return self;
@@ -50,25 +55,35 @@
 
 - (void)uploadImageToParse:(UIImage*)image named:(NSString*)imageName;
 {
-    //upload the image to Parse
-    image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(640, 640)];
-    NSData* imageData = UIImagePNGRepresentation(image);
+    image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(640, 640)];  //scale the image to make < 10 MB
+    NSData* imageData = UIImagePNGRepresentation(image);  //dump raw PNG data
     
-    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"] data:imageData];
+    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"] data:imageData];  //create the parse file
     
-    PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"];
-    userPhoto[@"imageFile"] = imageFile;
+    PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];  //create parse object
+    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"];  //ensure PNG file name
+    userPhoto[@"imageFile"] = imageFile;  //set the image file
+    
+    //save the image
     [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        
         if(succeeded)
         {
             [Parse incrementPhotoCount];  //increment the number of photos if upload suceeded
+            [_uploadSpinner stopAnimating];
+            [self presentViewController:_successAlert animated:YES completion:nil];  //let the user know success was achieved
         }
         else
         {
             NSLog(@"Error: %@", error);
         }
     }];
+    
+    //show activity spinner
+    _uploadSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [_uploadSpinner setCenter:CGPointMake(AVAILABLE_WIDTH / 2.0, self.view.frame.size.height / 2.0)];
+    [self.view addSubview:_uploadSpinner];
+    [_uploadSpinner startAnimating];
 }
 
 #pragma mark - UIImagePickerController delegate methods
