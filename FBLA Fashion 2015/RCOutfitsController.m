@@ -30,6 +30,8 @@
     _outfits.imageScrollView.panGestureRecognizer.enabled = NO;
     _outfits.imageScrollView.scrollEnabled = YES;
     
+    [self addSampleImages];
+    
     [self.view addSubview:_outfits];
     
     return self;
@@ -37,12 +39,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)addSampleImages  //retrieves the sample images off of parse
+{
+    PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];  //query to class
+    
+    [query whereKey:@"imageName" containsString:@"outfit"];  //want the key to contain outfit
+    
+    //find the set of objects
+    [query findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
+        if (!error)
+        {
+            //iterate through the objects to get their imageFile property
+            for (PFObject* object in objects)
+            {
+                PFFile* imageFile = object[@"imageFile"];
+   
+                //download the image specified by the object
+                [imageFile getDataInBackgroundWithBlock:^(NSData* imageData, NSError* error) {
+                    if(!error)
+                    {
+                        //convert the image data into a uiimage and add it to the outfits
+                        UIImage* image = [UIImage imageWithData:imageData];
+                        [_outfits addOutfitWithImage:image];
+                    }
+                    else
+                    {
+                        NSLog(@"ERROR: %@", error);
+                    }
+                 }];
+            }
+        }
+        
+        else
+        {
+            NSLog(@"error: %@", error);
+        }
+    }];
+    
+}
+
+- (void)uploadImageToParse:(UIImage*)image named:(NSString*)imageName;
+{
+    //upload the image to Parse
+    NSData* imageData = UIImagePNGRepresentation(image);
+    PFFile* imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"] data:imageData];
+    
+    PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".png"];
+    userPhoto[@"imageFile"] = imageFile;
+    [userPhoto saveInBackground];
 }
 
 #pragma mark - OutfitImageDelegate Delegate Methods

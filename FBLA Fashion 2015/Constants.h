@@ -10,6 +10,7 @@
 #define Constants_h
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 // UI Constants and Macros
 

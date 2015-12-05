@@ -17,4 +17,8 @@
 
 @property (nonatomic,weak) id<OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate> delegate;
 
+- (void)addOutfit:(RCOutfitImageView*)outfit;
+- (void)addOutfitWithImage:(UIImage*)image;
+
+
 @end
