@@ -53,6 +53,7 @@
     CGFloat pathX = AVAILABLE_WIDTH / 2.0 - LINE_WIDTH / 2.0;
     CGFloat pathY = buttonY;
     
+    //configure the title label
     _redCarpetLabel = [[UILabel alloc] initWithFrame:CGRectMake(redCarpetLabelX, redCarpetLabelY, redCarpetLabelWidth, redCarpetLabelHeight)];
     _redCarpetLabel.text = @"RED CARPET";
     _redCarpetLabel.font = [UIFont fontWithName:APP_FONT size:TITLE_FONT_SIZE];
@@ -61,6 +62,7 @@
     _redCarpetLabel.adjustsFontSizeToFitWidth = YES;
     _redCarpetLabel.minimumScaleFactor = TITLE_FONT_SIZE/_redCarpetLabel.font.pointSize;
     
+    //configure the sign in label
     _signInButton = [[UIButton alloc] initWithFrame:CGRectMake(signInButtonX, buttonY, buttonWidth, buttonHeight)];
     [_signInButton setTitle:@"sign in" forState:UIControlStateNormal];
     [_signInButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -68,6 +70,7 @@
     _signInButton.titleLabel.textAlignment = NSTextAlignmentRight;
     _signInButton.titleLabel.font = [UIFont fontWithName:APP_FONT size:BUTTON_FONT_SIZE];
     
+    //configure the register label
     _registerButton = [[UIButton alloc] initWithFrame:CGRectMake(registerButtonX, buttonY, buttonWidth, buttonHeight)];
     [_registerButton setTitle:@"register" forState:UIControlStateNormal];
     [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

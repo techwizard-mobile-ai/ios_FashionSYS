@@ -2,7 +2,7 @@
 //  RCOutfitImageView.m
 //  Red Carpet
 //
-//  Created by Stephen Polcyn on 12/4/15.
+//  Created by Stephen Polcyn on 12/1/15.
 //  Copyright © 2015 SPYN Enterprises. All rights reserved.
 //
 

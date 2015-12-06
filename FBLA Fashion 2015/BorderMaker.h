@@ -1,3 +1,7 @@
+//
+//  Created by Stephen Polcyn
+//  Copyright (c) 2014 Stephen Polcyn. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

@@ -2,7 +2,7 @@
 //  RCDressCodeView.m
 //  Red Carpet
 //
-//  Created by Stephen Polcyn on 12/3/15.
+//  Created by Stephen Polcyn on 12/1/15.
 //  Copyright © 2015 SPYN Enterprises. All rights reserved.
 //
 
@@ -23,8 +23,8 @@
     self = [super initWithFrame:frame];
  
     NSURLRequest* dressCodeRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:DRESS_CODE_URL]];  //create the url request
-    [self loadRequest:dressCodeRequest];
-    self.scalesPageToFit = YES;
+    [self loadRequest:dressCodeRequest];  //load the request
+    self.scalesPageToFit = YES;  //scale the page
     
     return self;
 }

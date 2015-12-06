@@ -61,18 +61,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+//navigation bar according to which view is present
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 
+//navigation bar according to which view is present
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
 }
 
+//present the sign in view controller
 - (void)signIn:(id)sender
 {    
     RCSignInViewController* signInController = [[RCSignInViewController alloc] init];
@@ -80,7 +83,7 @@
     [self.navigationController pushViewController:signInController animated:YES];
 }
 
-
+//present the registration interface
 - (void)newRegister:(id)sender
 {
     RCRegisterViewController* registerController = [[RCRegisterViewController alloc] init];
@@ -88,6 +91,7 @@
     [self.navigationController pushViewController:registerController animated:YES];
 }
 
+//switch to the tab bar from the login
 - (void)switchToTabBar
 {
     [self dismissViewControllerAnimated:NO completion:nil];

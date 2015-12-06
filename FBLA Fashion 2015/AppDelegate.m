@@ -27,8 +27,6 @@
     //Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-
-    
     RCLoginViewController* loginController = [[RCLoginViewController alloc] init];  //main login controller with sign in or register fields
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:loginController];  //navigation controller to manage the views
     

@@ -87,6 +87,7 @@
     return self;
 }
 
+//deep copy a textfield
 - (UITextField *)copytextField:(UITextField *)textField
 {
     NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject: textField];

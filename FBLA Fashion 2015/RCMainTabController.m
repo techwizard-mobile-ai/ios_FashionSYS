@@ -2,7 +2,7 @@
 //  MainTabController.m
 //  Red Carpet
 //
-//  Created by Stephen Polcyn on 12/3/15.
+//  Created by Stephen Polcyn on 12/1/15.
 //  Copyright © 2015 SPYN Enterprises. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 {
     self = [super init];
     
+    //set the view controllers managed by the tab bar
     self.viewControllers = [NSArray arrayWithObjects:[[RCOutfitsController alloc] init], [[RCUploadController alloc] init], [[RCDressCodeController alloc] init], nil];
     self.tabBar.backgroundColor = [UIColor whiteColor];
     self.tabBar.opaque = TRUE;
