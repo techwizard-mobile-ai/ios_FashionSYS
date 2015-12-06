@@ -14,8 +14,6 @@
 
 @property NSMutableArray* outfitImageViews;
 
-@property (nonatomic,weak) id<UITabBarDelegate> delegate;
-
 //- (void)addOutfit:(RCOutfitImageView*)outfit;
 - (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number;
 

@@ -54,13 +54,6 @@
     [self addOutfit:imageView];
 }
 
-#pragma mark - UITabBarDelegate Methods
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    [self.delegate tabBar:tabBar didSelectItem:item];
-}
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
