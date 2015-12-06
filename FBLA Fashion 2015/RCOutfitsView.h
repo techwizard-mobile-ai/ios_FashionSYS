@@ -15,7 +15,7 @@
 @property NSMutableArray* outfitImageViews;
 
 //- (void)addOutfit:(RCOutfitImageView*)outfit;
-- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number favorites:(NSUInteger)favorites style:(NSUInteger)style dressCode:(NSUInteger)dressCode;
+- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number favorites:(NSUInteger)favorites style:(NSUInteger)style dressCode:(NSUInteger)dressCode comments:(NSUInteger)comments;
 
 
 @end

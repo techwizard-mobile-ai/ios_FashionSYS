@@ -15,10 +15,9 @@
 {
     self = [super initWithFrame:frame];
     
-    // UI Constants
-    CGFloat buttonBarHeight = TAB_BAR_HEIGHT;
-    
     _commentsTable = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+    
+    self.allowsSelection = NO;
     
     return self;
 }

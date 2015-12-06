@@ -82,7 +82,7 @@
                     {
                         //convert the image data into a uiimage and add it to the outfits
                         UIImage* image = [UIImage imageWithData:imageData];
-                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue]];
+                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue] comments:[[object objectForKey:@"comments"] count]];
                     }
                     else
                     {
@@ -125,7 +125,7 @@
                         {
                             //convert the image data into a uiimage and add it to the outfits
                             UIImage* image = [UIImage imageWithData:imageData];
-                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue]];                        }
+                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue] comments:[[object objectForKey:@"comments"] count]];                        }
                         else
                         {
                             NSLog(@"ERROR: %@", error);
@@ -157,9 +157,7 @@
 #pragma mark - OutfitImageView Methods
 
 - (void)favorite:(RCOutfitImageView*)sender
-{
-    NSLog(@"favoriting image %lu", (unsigned long)sender.imageNumber);
-    
+{    
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
     
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
@@ -175,13 +173,23 @@
 
 - (void)comments:(RCOutfitImageView*)sender
 {
-    NSLog(@"comments");
+    PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+    
+    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
+
+    NSArray* resultantObjects = [query findObjects];
+
+    UINavigationController* navControl = [[UINavigationController alloc] init];
+    
+    RCCommentsViewController* commentsController = [[RCCommentsViewController alloc] initWithPFObject:[resultantObjects objectAtIndex:0]];
+    commentsController.imageView = sender;
+    [navControl addChildViewController:commentsController];
+    
+    [self presentViewController:navControl animated:YES completion:nil];
 }
 
 - (void)style:(RCOutfitImageView*)sender
 {
-    NSLog(@"styling image %lu", (unsigned long)sender.imageNumber);
-    
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
     
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
@@ -197,8 +205,6 @@
 
 - (void)dressCode:(RCOutfitImageView*)sender
 {
-    NSLog(@"dresscoding image %lu", (unsigned long)sender.imageNumber);
-    
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
     
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
@@ -211,7 +217,6 @@
         }
     }];
 }
-
 
 /*
  #pragma mark - Navigation

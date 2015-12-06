@@ -41,7 +41,7 @@
     [self addSubview:outfit.actionToolBar];
 }
 
-- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number favorites:(NSUInteger)favorites style:(NSUInteger)style dressCode:(NSUInteger)dressCode
+- (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number favorites:(NSUInteger)favorites style:(NSUInteger)style dressCode:(NSUInteger)dressCode comments:(NSUInteger)comments
 {
     //configure the image view
     RCOutfitImageView* imageView = [[RCOutfitImageView alloc] initWithFrame:CGRectMake(0, 0, AVAILABLE_WIDTH, self.frame.size.height)];
@@ -53,6 +53,7 @@
     imageView.favoriteLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)favorites];
     imageView.styleLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)style];
     imageView.dressCodeLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)dressCode];
+    imageView.commentsLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)comments];
 
     
     //add the imageview to the scrollview

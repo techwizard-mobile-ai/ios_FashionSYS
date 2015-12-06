@@ -21,6 +21,5 @@
 
 @property UITableView* commentsTable;
 
-@property (nonatomic, weak) id<UITableViewDelegate, RCCommentsViewDelegate> delegate;
 
 @end

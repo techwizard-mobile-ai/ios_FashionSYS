@@ -9,14 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "RCCommentsView.h"
+#import "RCOutfitImageView.h"
 
-@interface RCCommentsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, RCCommentsViewDelegate>
+@interface RCCommentsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, RCCommentsViewDelegate, UITextFieldDelegate>
 
 @property PFObject* objectData;
+@property RCOutfitImageView* imageView;
 @property NSMutableArray* comments;
 @property RCCommentsView* commentsView;
 
 @property UIBarButtonItem* exitButton;
 @property UIBarButtonItem* addCommentButton;
+
+@property UIAlertController* addCommentController;
+
+- (id)initWithPFObject:(PFObject*)object;
 
 @end

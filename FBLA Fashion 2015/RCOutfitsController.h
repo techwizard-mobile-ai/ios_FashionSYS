@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RCOutfitsView.h"
+#import "RCCommentsViewController.h"
 
 @interface RCOutfitsController : UIViewController <OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate>
 
