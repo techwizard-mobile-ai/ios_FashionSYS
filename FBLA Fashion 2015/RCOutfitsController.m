@@ -34,7 +34,7 @@
     _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
     _outfits.delegate = self;
     _outfits.userInteractionEnabled = YES;
-    _outfits.imageScrollView.delegate = self;
+    _outfits.delegate = self;
 
     //add the images stored in Parse
     [self addImages];

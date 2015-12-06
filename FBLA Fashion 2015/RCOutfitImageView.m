@@ -86,9 +86,8 @@
     _commentsButton.userInteractionEnabled = YES;
     _dressCodeButton.userInteractionEnabled = YES;
     _styleButton.userInteractionEnabled = YES;
-
     
-    [self addSubview:_actionToolBar];  //add the toolbar to the container
+    //[self addSubview:_actionToolBar];  //add the toolbar to the container
     
     //resize text to fit smallest
     _dressCodeButton.titleLabel.font = [self fontSizeForLabel:_dressCodeButton.titleLabel];
