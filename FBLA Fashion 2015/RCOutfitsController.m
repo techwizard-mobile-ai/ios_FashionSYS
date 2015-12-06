@@ -104,7 +104,7 @@
 {
     [_uploadSpinner startAnimating];
     
-    int photoDifference = [Parse getCurrentPhotoCount] - [_outfits.outfitImageViews count]; //calculate difference between the number stored in parse and the number displayed
+    unsigned long photoDifference = [Parse getCurrentPhotoCount] - [_outfits.outfitImageViews count]; //calculate difference between the number stored in parse and the number displayed
     
     if(photoDifference > 0) //if more in parse, pull them down
     {

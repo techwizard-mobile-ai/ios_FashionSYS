@@ -44,7 +44,7 @@
         _objectData[@"comments"] = _comments;
         [_objectData save];
         
-        _imageView.commentsLabel.text = [NSString stringWithFormat:@"%d", [_comments count]];
+        _imageView.commentsLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)[_comments count]];
         
         [_commentsView reloadData];
     }];
