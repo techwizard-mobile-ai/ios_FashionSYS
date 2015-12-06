@@ -78,6 +78,11 @@
     [_dressCodeButton addTarget:self action:@selector(dressCodeTapped) forControlEvents:UIControlEventTouchUpInside];
     [_styleButton addTarget:self action:@selector(styleTapped) forControlEvents:UIControlEventTouchUpInside];
     
+    _favoriteButton.userInteractionEnabled = YES;
+    _commentsButton.userInteractionEnabled = YES;
+    _dressCodeButton.userInteractionEnabled = YES;
+    _styleButton.userInteractionEnabled = YES;
+    
     //configure toolbar
     _actionToolBar = [[UIView alloc] initWithFrame:CGRectMake(DEFAULT_X, toolBarY, toolBarWidth, toolBarHeight)];
     _actionToolBar.userInteractionEnabled = YES;
@@ -86,11 +91,6 @@
     [_actionToolBar addSubview:_commentsButton];
     [_actionToolBar addSubview:_dressCodeButton];
     [_actionToolBar addSubview:_styleButton];
-    
-    _favoriteButton.userInteractionEnabled = YES;
-    _commentsButton.userInteractionEnabled = YES;
-    _dressCodeButton.userInteractionEnabled = YES;
-    _styleButton.userInteractionEnabled = YES;
     
     //resize text to fit smallest
     _dressCodeButton.titleLabel.font = [self fontSizeForLabel:_dressCodeButton.titleLabel];
@@ -123,6 +123,7 @@
     return self;
 }
 
+//compute the font size for a given label
 - (UIFont*)fontSizeForLabel:(UILabel*)label;
 {
     float largestFontSize = 36;
@@ -134,6 +135,7 @@
     return [UIFont systemFontOfSize:largestFontSize];
 }
 
+//configure the labels for the stats bar with the specified attributes
 - (void)configureStatsLabel:(UILabel*)label
 {
     label.backgroundColor = [UIColor RCBackgroundColor];
@@ -149,6 +151,7 @@
     self.imageView.image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(IMAGE_WIDTH, IMAGE_HEIGHT)];
 }
 
+//sends a message on to the delegate to do a task based on the selected imageview
 - (void)favoriteTapped
 {
     [self.delegate favorite:self];

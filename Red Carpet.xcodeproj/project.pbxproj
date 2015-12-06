@@ -15,10 +15,8 @@
 		D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D05DD0F01C04F428002FD52C /* RCRegisterView.m */; };
 		D05DD0F81C05240D002FD52C /* ios in Resources */ = {isa = PBXBuildFile; fileRef = D05DD0F71C05240D002FD52C /* ios */; };
 		D0D3D8B81C10DD4200721389 /* RCMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8B71C10DD4200721389 /* RCMainTabController.m */; };
-		D0D3D8C11C10E1AB00721389 /* RCCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8C01C10E1AB00721389 /* RCCommunityView.m */; };
 		D0D3D8C41C10E1BF00721389 /* RCDressCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8C31C10E1BF00721389 /* RCDressCodeView.m */; };
 		D0D3D8C81C10E1FB00721389 /* RCOutfitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8C71C10E1FB00721389 /* RCOutfitsController.m */; };
-		D0D3D8CB1C10E25700721389 /* RCCommunityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8CA1C10E25700721389 /* RCCommunityController.m */; };
 		D0D3D8D01C10E28600721389 /* RCDressCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8CF1C10E28600721389 /* RCDressCodeController.m */; };
 		D0D3D8D51C10FBCE00721389 /* outfits-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8D41C10FBCE00721389 /* outfits-icon.png */; };
 		D0D3D8D71C10FCDF00721389 /* dress-code-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8D61C10FCDF00721389 /* dress-code-icon.png */; };
@@ -100,14 +98,10 @@
 		D05DD0F71C05240D002FD52C /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		D0D3D8B61C10DD4200721389 /* RCMainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMainTabController.h; sourceTree = "<group>"; };
 		D0D3D8B71C10DD4200721389 /* RCMainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMainTabController.m; sourceTree = "<group>"; };
-		D0D3D8BF1C10E1AB00721389 /* RCCommunityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommunityView.h; sourceTree = "<group>"; };
-		D0D3D8C01C10E1AB00721389 /* RCCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommunityView.m; sourceTree = "<group>"; };
 		D0D3D8C21C10E1BF00721389 /* RCDressCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDressCodeView.h; sourceTree = "<group>"; };
 		D0D3D8C31C10E1BF00721389 /* RCDressCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDressCodeView.m; sourceTree = "<group>"; };
 		D0D3D8C61C10E1FB00721389 /* RCOutfitsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOutfitsController.h; sourceTree = "<group>"; };
 		D0D3D8C71C10E1FB00721389 /* RCOutfitsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOutfitsController.m; sourceTree = "<group>"; };
-		D0D3D8C91C10E25700721389 /* RCCommunityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommunityController.h; sourceTree = "<group>"; };
-		D0D3D8CA1C10E25700721389 /* RCCommunityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommunityController.m; sourceTree = "<group>"; };
 		D0D3D8CE1C10E28600721389 /* RCDressCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDressCodeController.h; sourceTree = "<group>"; };
 		D0D3D8CF1C10E28600721389 /* RCDressCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDressCodeController.m; sourceTree = "<group>"; };
 		D0D3D8D41C10FBCE00721389 /* outfits-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "outfits-icon.png"; sourceTree = "<group>"; };
@@ -262,17 +256,6 @@
 			name = "Main App";
 			sourceTree = "<group>";
 		};
-		D0D3D8CC1C10E26200721389 /* Community */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3D8C91C10E25700721389 /* RCCommunityController.h */,
-				D0D3D8CA1C10E25700721389 /* RCCommunityController.m */,
-				D0D3D8BF1C10E1AB00721389 /* RCCommunityView.h */,
-				D0D3D8C01C10E1AB00721389 /* RCCommunityView.m */,
-			);
-			name = Community;
-			sourceTree = "<group>";
-		};
 		D0D3D8CD1C10E26D00721389 /* Outfits */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,14 +290,6 @@
 				D0D3D8EF1C1376F200721389 /* RCUploadView.m */,
 			);
 			name = Upload;
-			sourceTree = "<group>";
-		};
-		D0D3D8F21C13770B00721389 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3D8CC1C10E26200721389 /* Community */,
-			);
-			name = Legacy;
 			sourceTree = "<group>";
 		};
 		D0D3D8FB1C13C72D00721389 /* Comments */ = {
@@ -398,7 +373,6 @@
 				DCF714021BF7C32E00E5732E /* AppDelegate.m */,
 				D0D3D8B61C10DD4200721389 /* RCMainTabController.h */,
 				D0D3D8B71C10DD4200721389 /* RCMainTabController.m */,
-				D0D3D8F21C13770B00721389 /* Legacy */,
 				D05DD0F31C0503A0002FD52C /* Login */,
 				DCF714071BF7C32E00E5732E /* Main.storyboard */,
 				DCF7140F1BF7C32E00E5732E /* LaunchScreen.storyboard */,
@@ -595,7 +569,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D3D9011C13C7F800721389 /* RCOutfitsView.m in Sources */,
-				D0D3D8CB1C10E25700721389 /* RCCommunityController.m in Sources */,
 				D0D3D8C81C10E1FB00721389 /* RCOutfitsController.m in Sources */,
 				D0D3D8B81C10DD4200721389 /* RCMainTabController.m in Sources */,
 				DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */,
@@ -605,7 +578,6 @@
 				DCF714001BF7C32E00E5732E /* main.m in Sources */,
 				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
 				D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */,
-				D0D3D8C11C10E1AB00721389 /* RCCommunityView.m in Sources */,
 				D0D3D8D01C10E28600721389 /* RCDressCodeController.m in Sources */,
 				D0D3D8EA1C135A5900721389 /* BorderMaker.m in Sources */,
 				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,

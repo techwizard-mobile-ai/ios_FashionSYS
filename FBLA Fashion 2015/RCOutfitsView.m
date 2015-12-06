@@ -16,6 +16,7 @@
     
     _outfitImageViews = [[NSMutableArray alloc] init];
     
+    //configure the scrollview
     self.userInteractionEnabled = YES;
     self.pinchGestureRecognizer.enabled = NO;
     self.panGestureRecognizer.enabled = NO;
@@ -50,6 +51,7 @@
     imageView.userInteractionEnabled = YES;
     [imageView setImage:image];
     
+    //update the labels
     imageView.favoriteLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)favorites];
     imageView.styleLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)style];
     imageView.dressCodeLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)dressCode];

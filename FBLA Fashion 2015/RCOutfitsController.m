@@ -21,7 +21,6 @@
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Outfits" image:[UIImage imageNamed:@"outfits-icon.png"] tag:1];
     self.title = @"Outfits";
     
-    
     //configure the refresh button
     _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y, AVAILABLE_WIDTH, TAB_BAR_HEIGHT / 2.0)];
     _refreshButton.backgroundColor = [UIColor RCBackgroundColor];
@@ -34,7 +33,6 @@
     _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y  + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
     _outfits.delegate = self;
     _outfits.userInteractionEnabled = YES;
-    _outfits.delegate = self;
 
     //add the images stored in Parse
     [self addImages];
@@ -44,6 +42,7 @@
     [_uploadSpinner setCenter:CGPointMake(AVAILABLE_WIDTH / 2.0, self.view.frame.size.height / 2.0)];
     [self.view addSubview:_uploadSpinner];
     
+    //add the views to the controller
     [self.view addSubview:_outfits];
     [self.view addSubview:_refreshButton];
     
@@ -100,18 +99,20 @@
     
 }
 
+//check for new images and add them to the views
 - (void)updateImages
 {
     [_uploadSpinner startAnimating];
     
-    int photoDifference = [Parse getCurrentPhotoCount] - [_outfits.outfitImageViews count];
+    int photoDifference = [Parse getCurrentPhotoCount] - [_outfits.outfitImageViews count]; //calculate difference between the number stored in parse and the number displayed
     
-    if(photoDifference > 0)
+    if(photoDifference > 0) //if more in parse, pull them down
     {
-        PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+        PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"]; //set up the query
         
-        [query whereKey:@"imageName" containsString:@"outfit"];
+        [query whereKey:@"imageName" containsString:@"outfit"]; //specialize the query
         
+        //pull down the new objects and add them to the view
         [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
             for (PFObject* object in objects) {
                 
@@ -139,6 +140,7 @@
         }];
     }
     
+    //show the user that something happened
     _refreshButton.backgroundColor = [UIColor greenColor];
     
     [UIView animateWithDuration:1.0 animations:^{
@@ -146,6 +148,7 @@
     }];
 }
 
+//take the outfit number out of the string
 - (NSUInteger)extractOutfitNumber:(PFObject*)object
 {
     NSString* imageName = object[@"imageName"];
@@ -156,10 +159,10 @@
 
 #pragma mark - OutfitImageView Methods
 
+//updates the Parse data and the view with the favorite
 - (void)favorite:(RCOutfitImageView*)sender
 {    
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
-    
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
@@ -171,29 +174,35 @@
     }];
 }
 
+//allow for comment editing
 - (void)comments:(RCOutfitImageView*)sender
 {
+    //pull down the object for the view
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
-    
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
-
     NSArray* resultantObjects = [query findObjects];
 
+    //create a navigation controller in which to present the table view controller
     UINavigationController* navControl = [[UINavigationController alloc] init];
     
+    //create controller in which to present the table view
     RCCommentsViewController* commentsController = [[RCCommentsViewController alloc] initWithPFObject:[resultantObjects objectAtIndex:0]];
     commentsController.imageView = sender;
+    
+    //add the comments controller to the nav controller
     [navControl addChildViewController:commentsController];
     
+    //present the controller
     [self presentViewController:navControl animated:YES completion:nil];
 }
 
 - (void)style:(RCOutfitImageView*)sender
 {
+    //prepare the query for the object
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
-    
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
     
+    //get the object and update the UI and the Parse data with the style +1
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         for (PFObject* object in objects) {
             object[@"style"] = @([[object valueForKey:@"style"] integerValue] + 1);
@@ -205,10 +214,11 @@
 
 - (void)dressCode:(RCOutfitImageView*)sender
 {
+    //prepare the query for the object
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
-    
     [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
     
+    //get the object and update the UI and the Parse data with the dress code +1
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         for (PFObject* object in objects) {
             object[@"dressCode"] = @([[object valueForKey:@"dressCode"] integerValue] + 1);

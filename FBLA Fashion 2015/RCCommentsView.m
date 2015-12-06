@@ -17,7 +17,7 @@
     
     _commentsTable = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     
-    self.allowsSelection = NO;
+    self.allowsSelection = NO; //comments can't be selected; looks silly to have them highlighted
     
     return self;
 }

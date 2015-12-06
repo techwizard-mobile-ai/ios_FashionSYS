@@ -12,14 +12,14 @@
 
 @interface RCOutfitsController : UIViewController <OutfitImageDelegate, UIScrollViewDelegate, UITabBarDelegate>
 
-@property RCOutfitsView* outfits;
-@property UIButton* refreshButton;
-@property UIActivityIndicatorView* uploadSpinner;
+@property RCOutfitsView* outfits; //view containing outfits
+@property UIButton* refreshButton; //button to initiate image refresh
+@property UIActivityIndicatorView* uploadSpinner; //spinner to indicate image refresh
 
+//methods for reacting to button pushes
 - (void)favorite:(RCOutfitImageView*)sender;
 - (void)comments:(RCOutfitImageView*)sender;
 - (void)style:(RCOutfitImageView*)sender;
 - (void)dressCode:(RCOutfitImageView*)sender;
-
 
 @end

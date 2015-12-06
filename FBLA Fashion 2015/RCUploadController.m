@@ -18,9 +18,11 @@
 {
     self = [super init];
     
+    //configure the view for uploading
     _uploadView = [[RCUploadView alloc] initWithFrame:CGRectMake(0, DEFAULT_Y, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT)];
     _uploadView.delegate = self;
     
+    //set up it's relation with other controllers
     self.title = @"Upload";
     self.tabBarItem.title = @"Upload";
     self.tabBarItem.image = [UIImage imageNamed:@"upload-icon.png"];
@@ -46,6 +48,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//configures and presents the image picker
 - (void)beginImageUploadProcess
 {
     UIImagePickerController* controller = [[UIImagePickerController alloc] init];
@@ -54,6 +57,7 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+//uploads the iamge to parse
 - (void)uploadImageToParse:(UIImage*)image named:(NSString*)imageName;
 {
     NSData* imageData = UIImageJPEGRepresentation(image, 1.0);  //dump raw JPG data
@@ -63,9 +67,12 @@
     PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];  //create parse object
     userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".jpg"];  //ensure PNG file name
     userPhoto[@"imageFile"] = imageFile;  //set the image file
+    
+    //start with 0 for all stats
     userPhoto[@"favorites"] = @0;
     userPhoto[@"dressCode"] = @0;
     userPhoto[@"style"] = @0;
+    userPhoto[@"comments"] = @0;
     
     //save the image
     [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
@@ -97,7 +104,7 @@
     
     [self uploadImageToParse:image named:[NSString stringWithFormat:@"outfit%d.png", [Parse getCurrentPhotoCount] + 1]];  //upload it
     
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil]; //dismiss the image picker
 }
 
 

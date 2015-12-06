@@ -37,6 +37,7 @@
     
     //configure the addcomment alert
     _addCommentController = [UIAlertController alertControllerWithTitle:@"Add Comment" message:@"Your comment: " preferredStyle:UIAlertControllerStyleAlert];
+    
     UIAlertAction* submitAction = [UIAlertAction actionWithTitle:@"Submit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [_comments addObject:[[_addCommentController textFields] objectAtIndex:0].text];
         
@@ -52,10 +53,12 @@
     [_addCommentController addAction:cancelAction];
     [_addCommentController addAction:submitAction];
     
+    //add a textfield
+    __block RCCommentsViewController* rc = self;
     [_addCommentController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.text = @"";
         textField.placeholder = @"Comment...";
-        textField.delegate = self;
+        textField.delegate = rc;
         textField.returnKeyType = UIReturnKeyDone;
     }];
     
@@ -72,15 +75,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UITableViewDelegate Methods
-
 #pragma mark - UITableViewDataSource Methods
 
+//only one section in this table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
+//count of the data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_comments count];
@@ -90,6 +93,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
+    //use reusable cells
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -104,11 +108,13 @@
 
 #pragma mark - RCCommentsViewDelegate Methods
 
+//adds comment
 -(void)addComment
 {
     [self presentViewController:_addCommentController animated:YES completion:nil];
 }
 
+//quits the comment view
 -(void)quit
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
@@ -116,10 +122,10 @@
 
 #pragma mark - UITextFieldDelegate Methods
 
+//sends away the keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    
     return YES;
 }
 

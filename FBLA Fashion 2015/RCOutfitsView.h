@@ -14,7 +14,7 @@
 
 @property NSMutableArray* outfitImageViews;
 
-//- (void)addOutfit:(RCOutfitImageView*)outfit;
+//adds an outfit with a large amount of data
 - (void)addOutfitWithImage:(UIImage*)image delegate:(id)delegate number:(NSUInteger)number favorites:(NSUInteger)favorites style:(NSUInteger)style dressCode:(NSUInteger)dressCode comments:(NSUInteger)comments;
 
 

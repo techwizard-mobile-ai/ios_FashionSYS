@@ -14,8 +14,8 @@
 {
     self = [super initWithFrame:frame];
     
+    //configure the upload button to be the whole screen and to send a message to the delegate when touched
     _uploadButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-    
     [_uploadButton setTitle:@"Tap to upload an image!" forState:UIControlStateNormal];
     _uploadButton.titleLabel.numberOfLines = 3;
     _uploadButton.titleLabel.adjustsFontSizeToFitWidth = YES;

@@ -30,16 +30,18 @@
     CGFloat PADDING, IMAGE_WIDTH, IMAGE_HEIGHT;
 }
 
-@property UIView* actionToolBar;
-@property UIView* statsToolBar;
-@property UIImageView* imageView;
-@property NSUInteger imageNumber;
+@property UIView* actionToolBar; //contains the buttons
+@property UIView* statsToolBar; //contains the stats
+@property UIImageView* imageView; //contains the image
+@property NSUInteger imageNumber; //contains the outfit number
 
+//buttons to change stats
 @property UIButton* favoriteButton;
 @property UIButton* commentsButton;
 @property UIButton* dressCodeButton;
 @property UIButton* styleButton;
 
+//labels to display stats
 @property UILabel* favoriteLabel;
 @property UILabel* commentsLabel;
 @property UILabel* dressCodeLabel;

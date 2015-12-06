@@ -15,6 +15,6 @@
 
 @property UIButton* signInButton;
 @property UIButton* registerButton;
-@property UILabel* redCarpetLabel;
+@property UILabel* redCarpetLabel;  //title label
 
 @end
