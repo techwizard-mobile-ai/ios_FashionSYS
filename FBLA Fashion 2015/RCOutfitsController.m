@@ -82,7 +82,7 @@
                     {
                         //convert the image data into a uiimage and add it to the outfits
                         UIImage* image = [UIImage imageWithData:imageData];
-                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object]];
+                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue]];
                     }
                     else
                     {
@@ -125,8 +125,7 @@
                         {
                             //convert the image data into a uiimage and add it to the outfits
                             UIImage* image = [UIImage imageWithData:imageData];
-                            [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object]];
-                        }
+                        [_outfits addOutfitWithImage:image delegate:self number:[self extractOutfitNumber:object] favorites:[[object objectForKey:@"favorites"] integerValue] style:[[object objectForKey:@"style"] integerValue] dressCode:[[object objectForKey:@"dressCode"] integerValue]];                        }
                         else
                         {
                             NSLog(@"ERROR: %@", error);
@@ -159,22 +158,19 @@
 
 - (void)favorite:(RCOutfitImageView*)sender
 {
-    NSLog(@"favoriting image %lu", sender.imageNumber);
+    NSLog(@"favoriting image %lu", (unsigned long)sender.imageNumber);
     
     PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
     
-    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", sender.imageNumber]];
+    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         for (PFObject* object in objects) {
             object[@"favorites"] = @([[object valueForKey:@"favorites"] integerValue] + 1);
             [object saveInBackground];
+            sender.favoriteLabel.text = [NSString stringWithFormat:@"%d", [[object objectForKey:@"favorites"] integerValue]];
         }
     }];
-
-    
-    
-    NSLog(@"favorite");
 }
 
 - (void)comments:(RCOutfitImageView*)sender
@@ -184,20 +180,38 @@
 
 - (void)style:(RCOutfitImageView*)sender
 {
-    NSLog(@"style");
+    NSLog(@"styling image %lu", (unsigned long)sender.imageNumber);
+    
+    PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+    
+    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
+        for (PFObject* object in objects) {
+            object[@"style"] = @([[object valueForKey:@"style"] integerValue] + 1);
+            [object saveInBackground];
+            sender.styleLabel.text = [NSString stringWithFormat:@"%d", [[object objectForKey:@"style"] integerValue]];
+        }
+    }];
 }
 
 - (void)dressCode:(RCOutfitImageView*)sender
 {
-    NSLog(@"dresscode");
+    NSLog(@"dresscoding image %lu", (unsigned long)sender.imageNumber);
+    
+    PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+    
+    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", (unsigned long)sender.imageNumber]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
+        for (PFObject* object in objects) {
+            object[@"dressCode"] = @([[object valueForKey:@"dressCode"] integerValue] + 1);
+            [object saveInBackground];
+            sender.dressCodeLabel.text = [NSString stringWithFormat:@"%d", [[object objectForKey:@"dressCode"] integerValue]];
+        }
+    }];
 }
 
-#pragma mark - TabBarDelegate methods
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    NSLog(@"tab bar item pressed");
-}
 
 /*
  #pragma mark - Navigation

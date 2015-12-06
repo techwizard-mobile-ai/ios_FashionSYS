@@ -31,7 +31,6 @@
     CGFloat buttonWidth = toolBarWidth / 4.0;
     
     CGFloat statsToolBarHeight = toolBarHeight / 2.0;
-    CGFloat statsToolBarWidth = toolBarWidth;
     
     IMAGE_WIDTH = frame.size.width;
     IMAGE_HEIGHT = frame.size.height - toolBarHeight - statsToolBarHeight;
@@ -104,12 +103,15 @@
     _imageView.userInteractionEnabled = YES;
     
     //configure stats tool bar
-    _favoriteLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 0, statsToolBarY, buttonWidth, statsToolBarHeight)];
-    _commentsLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 1, statsToolBarY, buttonWidth, statsToolBarHeight)];
-    _dressCodeLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 2, statsToolBarY, buttonWidth, statsToolBarHeight)];
-    _styleLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 3, statsToolBarY, buttonWidth, statsToolBarHeight)];
-
-    [_favoriteLabel setText:@"0"];
+    _favoriteLabel = [[UILabel alloc] initWithFrame:CGRectMake(statsToolBarX + buttonWidth * 0, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _commentsLabel = [[UILabel alloc] initWithFrame:CGRectMake(statsToolBarX + buttonWidth * 1, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _dressCodeLabel = [[UILabel alloc] initWithFrame:CGRectMake(statsToolBarX + buttonWidth * 2, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _styleLabel = [[UILabel alloc] initWithFrame:CGRectMake(statsToolBarX + buttonWidth * 3, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    
+    [self configureStatsLabel:_favoriteLabel];
+    [self configureStatsLabel:_commentsLabel];
+    [self configureStatsLabel:_dressCodeLabel];
+    [self configureStatsLabel:_styleLabel];
     
     [self addSubview:_favoriteLabel];
     [self addSubview:_commentsLabel];
@@ -132,18 +134,14 @@
     return [UIFont systemFontOfSize:largestFontSize];
 }
 
-- (UILabel*)statsLabelFactory:(CGRect)frame
+- (void)configureStatsLabel:(UILabel*)label
 {
-    UILabel* label = [[UILabel alloc] initWithFrame:frame];
-    
     label.backgroundColor = [UIColor RCBackgroundColor];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 1;
     label.text = @"0";
     label.adjustsFontSizeToFitWidth = YES;
-    
-    return label;
 }
 
 - (void)setImage:(UIImage *)image  //changes and scales the image to the appropriate size

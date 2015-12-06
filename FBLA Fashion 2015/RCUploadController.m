@@ -63,6 +63,9 @@
     PFObject* userPhoto = [PFObject objectWithClassName:@"UserPhoto"];  //create parse object
     userPhoto[@"imageName"] = [NSString stringWithFormat:@"%@%@", [imageName stringByDeletingPathExtension], @".jpg"];  //ensure PNG file name
     userPhoto[@"imageFile"] = imageFile;  //set the image file
+    userPhoto[@"favorites"] = @0;
+    userPhoto[@"dressCode"] = @0;
+    userPhoto[@"style"] = @0;
     
     //save the image
     [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
