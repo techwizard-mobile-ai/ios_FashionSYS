@@ -34,6 +34,8 @@
 		D0D3D8F41C137DAC00721389 /* upload-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8F31C137DAC00721389 /* upload-icon.png */; };
 		D0D3D8F71C13C71100721389 /* RCCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8F61C13C71100721389 /* RCCommentsViewController.m */; };
 		D0D3D8FA1C13C72700721389 /* RCCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8F91C13C72700721389 /* RCCommentsView.m */; };
+		D0D3D9001C13C7F800721389 /* RCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8FD1C13C7F800721389 /* RCLoginViewController.m */; };
+		D0D3D9011C13C7F800721389 /* RCOutfitsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8FF1C13C7F800721389 /* RCOutfitsView.m */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -46,7 +48,6 @@
 		DC905DEA1BFA8F0A00BB9B0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */; };
 		DC905DEC1BFA8F0F00BB9B0D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */; };
 		DC905DEE1BFA8F1800BB9B0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */; };
-		DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */; };
 		DCC75D601C11F4E100D06EDD /* RCOutfitImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */; };
 		DCC75D671C1250A200D06EDD /* outfit1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCC75D621C1250A200D06EDD /* outfit1.jpg */; };
 		DCC75D681C1250A200D06EDD /* outfit2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCC75D631C1250A200D06EDD /* outfit2.jpg */; };
@@ -128,6 +129,10 @@
 		D0D3D8F61C13C71100721389 /* RCCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommentsViewController.m; sourceTree = "<group>"; };
 		D0D3D8F81C13C72700721389 /* RCCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommentsView.h; sourceTree = "<group>"; };
 		D0D3D8F91C13C72700721389 /* RCCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommentsView.m; sourceTree = "<group>"; };
+		D0D3D8FC1C13C7F800721389 /* RCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginViewController.h; sourceTree = "<group>"; };
+		D0D3D8FD1C13C7F800721389 /* RCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginViewController.m; sourceTree = "<group>"; };
+		D0D3D8FE1C13C7F800721389 /* RCOutfitsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOutfitsView.h; sourceTree = "<group>"; };
+		D0D3D8FF1C13C7F800721389 /* RCOutfitsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOutfitsView.m; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -142,8 +147,6 @@
 		DC905DE91BFA8F0A00BB9B0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DC905DEB1BFA8F0F00BB9B0D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DC905DED1BFA8F1800BB9B0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCLoginViewController.h; path = ../RCLoginViewController.h; sourceTree = "<group>"; };
-		DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCLoginViewController.m; path = ../RCLoginViewController.m; sourceTree = "<group>"; };
 		DCC75D5E1C11F4E100D06EDD /* RCOutfitImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOutfitImageView.h; sourceTree = "<group>"; };
 		DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOutfitImageView.m; sourceTree = "<group>"; };
 		DCC75D621C1250A200D06EDD /* outfit1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outfit1.jpg; sourceTree = "<group>"; };
@@ -230,8 +233,8 @@
 			children = (
 				D05DD0F41C0503A7002FD52C /* Register */,
 				D05DD0F21C05039A002FD52C /* Sign In */,
-				DC905DF01BFCB49C00BB9B0D /* RCLoginViewController.h */,
-				DC905DF11BFCB49C00BB9B0D /* RCLoginViewController.m */,
+				D0D3D8FC1C13C7F800721389 /* RCLoginViewController.h */,
+				D0D3D8FD1C13C7F800721389 /* RCLoginViewController.m */,
 				DC26226E1BFE13BC00F17574 /* RCLoginView.h */,
 				DC26226F1BFE13BC00F17574 /* RCLoginView.m */,
 			);
@@ -275,6 +278,8 @@
 			children = (
 				D0D3D8C61C10E1FB00721389 /* RCOutfitsController.h */,
 				D0D3D8C71C10E1FB00721389 /* RCOutfitsController.m */,
+				D0D3D8FE1C13C7F800721389 /* RCOutfitsView.h */,
+				D0D3D8FF1C13C7F800721389 /* RCOutfitsView.m */,
 				DCC75D5E1C11F4E100D06EDD /* RCOutfitImageView.h */,
 				DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */,
 				D0D3D8FB1C13C72D00721389 /* Comments */,
@@ -589,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D3D9011C13C7F800721389 /* RCOutfitsView.m in Sources */,
 				D0D3D8CB1C10E25700721389 /* RCCommunityController.m in Sources */,
 				D0D3D8C81C10E1FB00721389 /* RCOutfitsController.m in Sources */,
 				D0D3D8B81C10DD4200721389 /* RCMainTabController.m in Sources */,
@@ -601,12 +607,12 @@
 				D05DD0E81C04F3DF002FD52C /* RCSignInViewController.m in Sources */,
 				D0D3D8C11C10E1AB00721389 /* RCCommunityView.m in Sources */,
 				D0D3D8D01C10E28600721389 /* RCDressCodeController.m in Sources */,
-				DC905DF21BFCB49C00BB9B0D /* RCLoginViewController.m in Sources */,
 				D0D3D8EA1C135A5900721389 /* BorderMaker.m in Sources */,
 				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
 				D0D3D8C41C10E1BF00721389 /* RCDressCodeView.m in Sources */,
 				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,
 				D0D3D8F71C13C71100721389 /* RCCommentsViewController.m in Sources */,
+				D0D3D9001C13C7F800721389 /* RCLoginViewController.m in Sources */,
 				D0D3D8F01C1376F200721389 /* RCUploadView.m in Sources */,
 				D0D3D8ED1C1376E000721389 /* RCUploadController.m in Sources */,
 				D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */,
