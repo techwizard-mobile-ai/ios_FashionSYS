@@ -23,7 +23,7 @@
     
     
     //configure the refresh button
-    _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT, AVAILABLE_WIDTH, TAB_BAR_HEIGHT / 2.0)];
+    _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y, AVAILABLE_WIDTH, TAB_BAR_HEIGHT / 2.0)];
     _refreshButton.backgroundColor = [UIColor RCBackgroundColor];
     [_refreshButton setTitle:@"Refresh Images" forState:UIControlStateNormal];
     [_refreshButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -31,7 +31,7 @@
     [_refreshButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     
     //configure scroll view for images
-    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y + NAVIGATION_BAR_HEIGHT + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
+    _outfits = [[RCOutfitsView alloc] initWithFrame:CGRectMake(DEFAULT_X, DEFAULT_Y  + _refreshButton.frame.size.height, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT - _refreshButton.frame.size.height)];
     _outfits.delegate = self;
     _outfits.userInteractionEnabled = YES;
     _outfits.delegate = self;

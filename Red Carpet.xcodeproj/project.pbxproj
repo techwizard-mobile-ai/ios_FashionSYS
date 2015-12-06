@@ -33,6 +33,8 @@
 		D0D3D8ED1C1376E000721389 /* RCUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8EC1C1376E000721389 /* RCUploadController.m */; };
 		D0D3D8F01C1376F200721389 /* RCUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8EF1C1376F200721389 /* RCUploadView.m */; };
 		D0D3D8F41C137DAC00721389 /* upload-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D3D8F31C137DAC00721389 /* upload-icon.png */; };
+		D0D3D8F71C13C71100721389 /* RCCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8F61C13C71100721389 /* RCCommentsViewController.m */; };
+		D0D3D8FA1C13C72700721389 /* RCCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D3D8F91C13C72700721389 /* RCCommentsView.m */; };
 		DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC26226F1BFE13BC00F17574 /* RCLoginView.m */; };
 		DC3DF02D1C0048D10012B1EF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3DF02C1C0048D10012B1EF /* Constants.m */; };
 		DC905DDC1BFA8EDF00BB9B0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC905DDB1BFA8EDF00BB9B0D /* AudioToolbox.framework */; };
@@ -125,6 +127,10 @@
 		D0D3D8EE1C1376F200721389 /* RCUploadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUploadView.h; sourceTree = "<group>"; };
 		D0D3D8EF1C1376F200721389 /* RCUploadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUploadView.m; sourceTree = "<group>"; };
 		D0D3D8F31C137DAC00721389 /* upload-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-icon.png"; sourceTree = "<group>"; };
+		D0D3D8F51C13C71000721389 /* RCCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommentsViewController.h; sourceTree = "<group>"; };
+		D0D3D8F61C13C71100721389 /* RCCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommentsViewController.m; sourceTree = "<group>"; };
+		D0D3D8F81C13C72700721389 /* RCCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommentsView.h; sourceTree = "<group>"; };
+		D0D3D8F91C13C72700721389 /* RCCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommentsView.m; sourceTree = "<group>"; };
 		DC26226E1BFE13BC00F17574 /* RCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLoginView.h; sourceTree = "<group>"; };
 		DC26226F1BFE13BC00F17574 /* RCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLoginView.m; sourceTree = "<group>"; };
 		DC2622711BFE7FD200F17574 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 				D0D3D8BD1C10E13400721389 /* RCOutfitsView.m */,
 				DCC75D5E1C11F4E100D06EDD /* RCOutfitImageView.h */,
 				DCC75D5F1C11F4E100D06EDD /* RCOutfitImageView.m */,
+				D0D3D8FB1C13C72D00721389 /* Comments */,
 			);
 			name = Outfits;
 			sourceTree = "<group>";
@@ -308,6 +315,17 @@
 				D0D3D8CC1C10E26200721389 /* Community */,
 			);
 			name = Legacy;
+			sourceTree = "<group>";
+		};
+		D0D3D8FB1C13C72D00721389 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3D8F51C13C71000721389 /* RCCommentsViewController.h */,
+				D0D3D8F61C13C71100721389 /* RCCommentsViewController.m */,
+				D0D3D8F81C13C72700721389 /* RCCommentsView.h */,
+				D0D3D8F91C13C72700721389 /* RCCommentsView.m */,
+			);
+			name = Comments;
 			sourceTree = "<group>";
 		};
 		DC905DD31BFA8E8900BB9B0D /* Frameworks */ = {
@@ -582,6 +600,7 @@
 				D0D3D8B81C10DD4200721389 /* RCMainTabController.m in Sources */,
 				DCF7140C1BF7C32E00E5732E /* FBLA_Fashion_2015.xcdatamodeld in Sources */,
 				DCF714031BF7C32E00E5732E /* AppDelegate.m in Sources */,
+				D0D3D8FA1C13C72700721389 /* RCCommentsView.m in Sources */,
 				DCC75D601C11F4E100D06EDD /* RCOutfitImageView.m in Sources */,
 				DCF714001BF7C32E00E5732E /* main.m in Sources */,
 				DC2622701BFE13BC00F17574 /* RCLoginView.m in Sources */,
@@ -593,6 +612,7 @@
 				D05DD0EB1C04F3EB002FD52C /* RCRegisterViewController.m in Sources */,
 				D0D3D8C41C10E1BF00721389 /* RCDressCodeView.m in Sources */,
 				D05DD0EE1C04F421002FD52C /* RCSignInView.m in Sources */,
+				D0D3D8F71C13C71100721389 /* RCCommentsViewController.m in Sources */,
 				D0D3D8F01C1376F200721389 /* RCUploadView.m in Sources */,
 				D0D3D8ED1C1376E000721389 /* RCUploadController.m in Sources */,
 				D05DD0F11C04F428002FD52C /* RCRegisterView.m in Sources */,
