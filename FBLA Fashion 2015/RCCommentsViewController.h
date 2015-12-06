@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
+#import "RCCommentsView.h"
 
-@interface RCCommentsViewController : UIViewController
+@interface RCCommentsViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, RCCommentsViewDelegate>
+
+@property PFObject* objectData;
+@property NSMutableArray* comments;
+@property RCCommentsView* commentsView;
+
+@property UIBarButtonItem* exitButton;
+@property UIBarButtonItem* addCommentButton;
 
 @end

@@ -14,6 +14,25 @@
 
 @implementation RCCommentsViewController
 
+- (id)initWithPFObject:(PFObject*)object
+{
+    self = [super init];
+    
+    _objectData = object;
+    
+    _comments = [NSMutableArray arrayWithArray:[_objectData objectForKey:@"comments"]];
+    _commentsView = [[RCCommentsView alloc] initWithFrame:CGRectMake(0, DEFAULT_Y, AVAILABLE_WIDTH, AVAILABLE_HEIGHT - TAB_BAR_HEIGHT)];
+    _commentsView.delegate = self;
+    
+    _addCommentButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addComment)];
+    _exitButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(quit)];
+    
+    self.navigationItem.rightBarButtonItem = _addCommentButton;
+    self.navigationItem.leftBarButtonItem = _exitButton;
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -23,6 +42,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITableViewDelegatemethods
+
+-
+
 
 /*
 #pragma mark - Navigation

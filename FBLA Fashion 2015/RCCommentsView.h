@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
-@interface RCCommentsView : UIView
+@protocol RCCommentsViewDelegate <NSObject>
+
+@required
+- (void)addComment;
+- (void)quit;
+
+@end
+
+@interface RCCommentsView : UITableView
+
+@property UITableView* commentsTable;
+
+@property (nonatomic, weak) id<UITableViewDelegate, RCCommentsViewDelegate> delegate;
 
 @end
