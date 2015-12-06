@@ -159,6 +159,21 @@
 
 - (void)favorite:(RCOutfitImageView*)sender
 {
+    NSLog(@"favoriting image %lu", sender.imageNumber);
+    
+    PFQuery* query = [PFQuery queryWithClassName:@"UserPhoto"];
+    
+    [query whereKey:@"imageName" equalTo:[NSString stringWithFormat:@"outfit%lu.jpg", sender.imageNumber]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
+        for (PFObject* object in objects) {
+            object[@"favorites"] = @([[object valueForKey:@"favorites"] integerValue] + 1);
+            [object saveInBackground];
+        }
+    }];
+
+    
+    
     NSLog(@"favorite");
 }
 

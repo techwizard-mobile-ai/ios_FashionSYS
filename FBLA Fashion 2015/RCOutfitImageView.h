@@ -31,6 +31,7 @@
 }
 
 @property UIView* actionToolBar;
+@property UIView* statsToolBar;
 @property UIImageView* imageView;
 @property NSUInteger imageNumber;
 
@@ -38,6 +39,11 @@
 @property UIButton* commentsButton;
 @property UIButton* dressCodeButton;
 @property UIButton* styleButton;
+
+@property UILabel* favoriteLabel;
+@property UILabel* commentsLabel;
+@property UILabel* dressCodeLabel;
+@property UILabel* styleLabel;
 
 @property (nonatomic, weak) id<OutfitImageDelegate> delegate;
 

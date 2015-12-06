@@ -25,7 +25,6 @@ extern NSString* const APP_TITLE;
 #define TAB_BAR_HEIGHT [[UITabBarController alloc] init].tabBar.frame.size.height
 #define NAVIGATION_BAR_HEIGHT [[UINavigationController alloc] init].navigationBar.frame.size.height
 
-
 // Interfaces
 
 @interface UIColor (RCScheme)  //class methods for using the default color schemes easily

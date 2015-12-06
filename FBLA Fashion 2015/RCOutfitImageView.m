@@ -30,13 +30,19 @@
     
     CGFloat buttonWidth = toolBarWidth / 4.0;
     
+    CGFloat statsToolBarHeight = toolBarHeight / 2.0;
+    CGFloat statsToolBarWidth = toolBarWidth;
+    
     IMAGE_WIDTH = frame.size.width;
-    IMAGE_HEIGHT = frame.size.height - toolBarHeight;
+    IMAGE_HEIGHT = frame.size.height - toolBarHeight - statsToolBarHeight;
     
     CGFloat imageViewX = DEFAULT_X;
     CGFloat imageViewY = 0;
     CGFloat imageViewWidth = IMAGE_WIDTH;
     CGFloat imageViewHeight = IMAGE_HEIGHT;
+    
+    CGFloat statsToolBarX = 0;
+    CGFloat statsToolBarY = IMAGE_HEIGHT;
     
     //configure button items
     _favoriteButton = [[UIButton alloc] initWithFrame:CGRectMake(favoriteX, buttonY, buttonWidth, toolBarHeight)];
@@ -70,8 +76,8 @@
     
     [_favoriteButton addTarget:self action:@selector(favoriteTapped) forControlEvents:UIControlEventTouchUpInside];
     [_commentsButton addTarget:self action:@selector(commentsTapped) forControlEvents:UIControlEventTouchUpInside];
-    [_dressCodeButton addTarget:self action:@selector(dressCodeTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [_styleButton addTarget:self action:@selector(styleTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [_dressCodeButton addTarget:self action:@selector(dressCodeTapped) forControlEvents:UIControlEventTouchUpInside];
+    [_styleButton addTarget:self action:@selector(styleTapped) forControlEvents:UIControlEventTouchUpInside];
     
     //configure toolbar
     _actionToolBar = [[UIView alloc] initWithFrame:CGRectMake(DEFAULT_X, toolBarY, toolBarWidth, toolBarHeight)];
@@ -87,8 +93,6 @@
     _dressCodeButton.userInteractionEnabled = YES;
     _styleButton.userInteractionEnabled = YES;
     
-    //[self addSubview:_actionToolBar];  //add the toolbar to the container
-    
     //resize text to fit smallest
     _dressCodeButton.titleLabel.font = [self fontSizeForLabel:_dressCodeButton.titleLabel];
     _favoriteButton.titleLabel.font = _dressCodeButton.titleLabel.font;
@@ -98,6 +102,19 @@
     //configure imageview
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(imageViewX, imageViewY, imageViewWidth, imageViewHeight)];
     _imageView.userInteractionEnabled = YES;
+    
+    //configure stats tool bar
+    _favoriteLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 0, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _commentsLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 1, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _dressCodeLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 2, statsToolBarY, buttonWidth, statsToolBarHeight)];
+    _styleLabel = [self statsLabelFactory:CGRectMake(statsToolBarX + buttonWidth * 3, statsToolBarY, buttonWidth, statsToolBarHeight)];
+
+    [_favoriteLabel setText:@"0"];
+    
+    [self addSubview:_favoriteLabel];
+    [self addSubview:_commentsLabel];
+    [self addSubview:_dressCodeLabel];
+    [self addSubview:_styleLabel];
     
     [self addSubview:_imageView];  //add the image to the container
     
@@ -115,24 +132,43 @@
     return [UIFont systemFontOfSize:largestFontSize];
 }
 
-- (void)setImage:(UIImage *)image
+- (UILabel*)statsLabelFactory:(CGRect)frame
+{
+    UILabel* label = [[UILabel alloc] initWithFrame:frame];
+    
+    label.backgroundColor = [UIColor RCBackgroundColor];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 1;
+    label.text = @"0";
+    label.adjustsFontSizeToFitWidth = YES;
+    
+    return label;
+}
+
+- (void)setImage:(UIImage *)image  //changes and scales the image to the appropriate size
 {
     self.imageView.image = [UIImage imageWithImage:image scaledToSize:CGSizeMake(IMAGE_WIDTH, IMAGE_HEIGHT)];
 }
 
 - (void)favoriteTapped
 {
-    NSLog(@"button tapped");
-    
     [self.delegate favorite:self];
-
 }
 
 - (void)commentsTapped
 {
-    NSLog(@"button tapped");
-
     [self.delegate comments:self];
+}
+
+- (void)dressCodeTapped
+{
+    [self.delegate dressCode:self];
+}
+
+- (void)styleTapped
+{
+    [self.delegate style:self];
 }
 
 /*
